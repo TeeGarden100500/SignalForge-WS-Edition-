@@ -17,7 +17,7 @@ function subscribeToSymbol(symbol) {
   const ws = new WebSocket(`wss://stream.binance.com:9443/ws/${stream}`);
 
   ws.on('open', () => {
-    if (config.DEBUG_LOGGING) console.log(`[WS] Подписка на ${symbol}`);
+//    if (config.DEBUG_LOGGING) console.log(`[WS] Подписка на ${symbol}`);
   });
 
   ws.on('message', (raw) => {
@@ -97,6 +97,9 @@ function updateSubscriptions(symbols) {
   }
 
   currentSymbols = allowed;
+  if (config.DEBUG_LOGGING) {
+  console.log(`[WS] Подписка завершена. Всего подключено пар: ${connections.size}`);
+}
 }
 
 function monitorTopPairs() {
