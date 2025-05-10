@@ -1,6 +1,5 @@
 module.exports = {
   // ░░░ Общие настройки ░░░
-  PAIRS: ['BTCUSDT', 'ETHUSDT', 'SOLUSDT'], // Список монет для отслеживания
   INTERVAL: '1m',                           // Таймфрейм свечей
 
   // ░░░ RSI ░░░
@@ -50,5 +49,12 @@ module.exports = {
 
   // ░░░ Другое ░░░
   DEBUG_LOGGING: true,               // Включить подробные логи
-  MAX_CACHE_LENGTH: 500              // Храним максимум 500 свечей на пару
+  MAX_CACHE_LENGTH: 500,              // Храним максимум 500 свечей на пару
+
+  
+  // ░░░ Волатильность ░░░
+  VOLATILITY_TOP_COUNT: 20,             // Сколько монет отбирать
+  VOLATILITY_TIMEFRAME: '5m',           // Какой таймфрейм использовать для анализа
+  VOLATILITY_LOOKBACK: 12,              // Сколько свечей анализировать (12×5m = 1 час)
+  VOLATILITY_REFRESH_INTERVAL_SEC: 300  // Как часто обновлять топ (в секундах)
 };
