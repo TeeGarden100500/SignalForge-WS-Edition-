@@ -1,15 +1,27 @@
 const WebSocket = require('ws');
 const config = require('../config/config');
 const { applyStrategies } = require('../strategies/strategyManager');
+const { getTopPairs } = require('../core/volatilitySelector');
+const { sendWebhook } = require('../webhook/webhookSender');
 
-const candleCache = {}; // { BTCUSDT: [ {open, high, low, close, volume, time}, ... ] }
+let ws = null;
+let currentPairs = [];
+let candleCache = {}; // { symbol: [ ...candles ] }
 
-function initWebSocket() {
-  const streams = config.PAIRS.map(p => `${p.toLowerCase()}@kline_${config.INTERVAL}`).join('/');
-  const ws = new WebSocket(`wss://stream.binance.com:9443/stream?streams=${streams}`);
+function buildStreamURL(pairs) {
+  const streams = pairs.map(p => `${p.toLowerCase()}@kline_${config.INTERVAL}`).join('/');
+  return `wss://stream.binance.com:9443/stream?streams=${streams}`;
+}
+
+function connectWS(pairs) {
+  if (ws) ws.terminate();
+
+  const url = buildStreamURL(pairs);
+  ws = new WebSocket(url);
+  candleCache = {}; // сбросим кэш
 
   ws.on('open', () => {
-    console.log(`[WS] Connected to Binance WebSocket`);
+    console.log('[WS] Connected to Binance for pairs:', pairs.join(', '));
   });
 
   ws.on('message', (data) => {
@@ -30,17 +42,13 @@ function initWebSocket() {
       time: kline.t
     };
 
-    if (kline.x) { // если свеча закрыта
+    if (kline.x) {
       candleCache[symbol].push(candle);
-
-      // Ограничим размер кэша
       if (candleCache[symbol].length > config.MAX_CACHE_LENGTH) {
         candleCache[symbol].shift();
       }
 
-      // Проверяем стратегию
       const triggers = applyStrategies(symbol, candleCache[symbol]);
-
       if (triggers.length >= config.SIGNAL_CONFIRMATION_COUNT) {
         const nowUTC = new Date().toISOString().slice(11, 16);
         const withinTime =
@@ -55,15 +63,11 @@ function initWebSocket() {
             price: candle.close
           };
 
-        if (config.DEBUG_LOGGING) {
-          console.log('[SIGNAL]', JSON.stringify(signal, null, 2));
+          if (config.DEBUG_LOGGING) {
+            console.log('[SIGNAL]', JSON.stringify(signal, null, 2));
           }
 
-          const { sendWebhook } = require('../webhook/webhookSender');
           sendWebhook(signal);
-
-
-          // TODO: В будущем — отправка через webhookSender.js
         }
       }
     }
@@ -75,8 +79,23 @@ function initWebSocket() {
 
   ws.on('close', () => {
     console.log('[WS] Disconnected. Reconnecting in 5s...');
-    setTimeout(initWebSocket, 5000);
+    setTimeout(() => connectWS(currentPairs), 5000);
   });
+}
+
+function monitorPairs() {
+  setInterval(() => {
+    const newPairs = getTopPairs();
+    const changed = JSON.stringify(newPairs) !== JSON.stringify(currentPairs);
+    if (newPairs.length > 0 && changed) {
+      currentPairs = [...newPairs];
+      connectWS(currentPairs);
+    }
+  }, 60000); // проверка раз в минуту
+}
+
+function initWebSocket() {
+  monitorPairs();
 }
 
 module.exports = {
