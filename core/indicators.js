@@ -84,3 +84,10 @@ function calculateVolumeSpike(volumes) {
 module.exports = {
   calculateRSI,
   calculateEMA,
+  calculateEMACrossover,
+  calculateMACD,
+  calculateATR,
+  calculateADX,
+  calculateMeanReversion,
+  calculateVolumeSpike
+};
