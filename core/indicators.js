@@ -71,8 +71,14 @@ function calculateMeanReversion(closes) {
 }
 
 function calculateVolumeSpike(volumes) {
+  const intervalMinutes = parseInt(config.INTERVAL); // '5m' → 5
+  const lookbackCandles = Math.floor(config.VOLUME_LOOKBACK / intervalMinutes);
+
+  if (volumes.length < lookbackCandles) return { recentVolume: 0, avgVolume: 0, spike: 0, isSpike: false };
+
   const recentVolume = volumes.at(-1);
-  const avgVolume = volumes.slice(-config.VOLUME_LOOKBACK).reduce((a, b) => a + b, 0) / config.VOLUME_LOOKBACK;
+  const avgVolume = volumes.slice(-lookbackCandles).reduce((a, b) => a + b, 0) / lookbackCandles;
+
   return {
     recentVolume,
     avgVolume,
