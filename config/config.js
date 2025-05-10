@@ -44,7 +44,7 @@ module.exports = {
   },
 
   // ░░░ Webhook ░░░
-  WEBHOOK_URL: 'https://your-service.com/webhook', // Куда отправлять сигналы
+  WEBHOOK_URL: 'https://webhook.site/4fee6f60-6f8a-45dd-b689-5dbdd899e019', // Куда отправлять сигналы
   ENABLE_WEBHOOK: true,
 
   // ░░░ Другое ░░░
