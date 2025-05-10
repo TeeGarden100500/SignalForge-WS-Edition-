@@ -1,4 +1,5 @@
+const { initVolatilityWatcher } = require('./core/volatilitySelector');
 const { initWebSocket } = require('./websocket/wsHandler');
 
-console.log(`[INIT] Запуск SignalForge...`);
+initVolatilityWatcher();
 initWebSocket();
