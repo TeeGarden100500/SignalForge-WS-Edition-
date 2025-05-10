@@ -55,7 +55,7 @@ function subscribeToSymbol(symbol) {
           };
 
           if (config.DEBUG_LOGGING) {
-            console.log('[SIGNAL]', JSON.stringify(signal, null, 2));
+            console.log(`⚡️[SIGNAL] ${signal.pair}:\\n  ` + signal.triggers.join('\\n  '));
           }
 
           sendWebhook(signal);
