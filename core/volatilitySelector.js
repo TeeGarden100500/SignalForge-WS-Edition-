@@ -45,12 +45,11 @@ function initVolatilityWatcher() {
     setInterval(() => getTopVolatilePairs(), config.VOLATILITY_REFRESH_INTERVAL_SEC * 1000);
   });
 
-  ws.on('message', (msg) => {
-
+   ws.on('message', (msg) => {
+      const data = JSON.parse(msg);
     if (config.DEBUG_LOGGING) {
-  console.log(`[VOLATILITY] Ticker received: ${data.length}`);
-}
-    const data = JSON.parse(msg);
+      console.log(`[VOLATILITY] Ticker sample: ${data.s || JSON.stringify(data).slice(0, 100)}`);
+  }
 
     if (!Array.isArray(data)) return;
 
