@@ -40,3 +40,4 @@ function calculateMACD(closes) {
 
 function calculateATR(highs, lows, closes) {
   return
+}
