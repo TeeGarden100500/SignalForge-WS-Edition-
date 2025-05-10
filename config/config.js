@@ -1,60 +1,60 @@
+
 module.exports = {
-  // ░░░ Общие настройки ░░░
-  INTERVAL: '1m',                           // Таймфрейм свечей
+  // ░░░ Таймфрейм ░░░
+  INTERVAL: '5m', // Используется в WebSocket и расчетах
 
   // ░░░ RSI ░░░
-  RSI_PERIOD: 14,
+  RSI_PERIOD: 60,         // 60 минут истории
   RSI_LOW: 30,
   RSI_HIGH: 70,
 
   // ░░░ EMA Crossover ░░░
-  EMA_FAST: 9,
-  EMA_SLOW: 21,
+  EMA_FAST: 21,           // 21 минута
+  EMA_SLOW: 55,           // 55 минут
 
   // ░░░ MACD ░░░
-  MACD_FAST: 12,
+  MACD_FAST: 12,          // 12 минут EMA
   MACD_SLOW: 26,
   MACD_SIGNAL: 9,
 
   // ░░░ Mean Reversion ░░░
-  MEAN_REVERSION_MA_PERIOD: 20,
-  MEAN_REVERSION_THRESHOLD: 2.0, // В % отклонения от MA
+  MEAN_REVERSION_MA_PERIOD: 90,  // 90 минут
+  MEAN_REVERSION_THRESHOLD: 2.0, // %
 
   // ░░░ ATR ░░░
-  ATR_PERIOD: 14,
-  MIN_ATR_PERCENT: 0.5, // Игнорируем сигналы, если ATR ниже этого значения
+  ATR_PERIOD: 30,
+  MIN_ATR_PERCENT: 0.5,
 
   // ░░░ ADX ░░░
-  ADX_PERIOD: 14,
-  MIN_ADX: 20, // Минимум силы тренда для EMA и MACD
+  ADX_PERIOD: 30,
+  MIN_ADX: 20,
 
   // ░░░ Объем ░░░
-  VOLUME_LOOKBACK: 20,               // Сколько свечей брать для расчета среднего объема
-  VOLUME_SPIKE_MULTIPLIER: 3.0,      // Минимум во сколько раз объем должен превышать средний
+  VOLUME_LOOKBACK: 20,           // В минутах
+  VOLUME_SPIKE_MULTIPLIER: 3.0,  // x раз превышения
 
   // ░░░ Пробой ░░░
-  BREAKOUT_LOOKBACK: 10,             // За сколько свечей назад искать экстремумы
-  BREAKOUT_MARGIN_PERCENT: 0.2,      // Сколько процентов "допуск" к уровню
+  BREAKOUT_LOOKBACK: 30,         // 30 минут назад
+  BREAKOUT_MARGIN_PERCENT: 0.2,
 
   // ░░░ Фильтрация сигналов ░░░
-  SIGNAL_CONFIRMATION_COUNT: 2,      // Сколько стратегий должно сработать одновременно
-  SIGNAL_TIME_WINDOW_UTC: {          // Только в рамках этого времени UTC давать сигналы
+  SIGNAL_CONFIRMATION_COUNT: 2,
+  SIGNAL_TIME_WINDOW_UTC: {
     start: '07:00',
     end: '19:00'
   },
 
   // ░░░ Webhook ░░░
-  WEBHOOK_URL: 'https://webhook.site/4fee6f60-6f8a-45dd-b689-5dbdd899e019', // Куда отправлять сигналы
+  WEBHOOK_URL: 'https://webhook.site/your-url',
   ENABLE_WEBHOOK: true,
 
-  // ░░░ Другое ░░░
-  DEBUG_LOGGING: true,               // Включить подробные логи
-  MAX_CACHE_LENGTH: 500,              // Храним максимум 500 свечей на пару
+  // ░░░ Логика и кэш ░░░
+  MAX_CACHE_LENGTH: 500,
+  DEBUG_LOGGING: true,
 
-  
   // ░░░ Волатильность ░░░
-  VOLATILITY_TOP_COUNT: 50,             // Сколько монет отбирать
-  VOLATILITY_TIMEFRAME: '1m',           // Какой таймфрейм использовать для анализа
-  VOLATILITY_LOOKBACK: 12,              // Сколько свечей анализировать (12×5m = 1 час)
-  VOLATILITY_REFRESH_INTERVAL_SEC: 300  // Как часто обновлять топ (в секундах)
+  VOLATILITY_TOP_COUNT: 50,
+  VOLATILITY_TIMEFRAME: '5m',
+  VOLATILITY_LOOKBACK: 60,              // 60 минут анализа
+  VOLATILITY_REFRESH_INTERVAL_SEC: 300  // раз в 5 минут
 };
