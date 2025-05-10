@@ -1,23 +1,29 @@
+
 const config = require('../config/config');
 const { EMA, RSI, MACD, ATR, ADX } = require('technicalindicators');
 
+function getCandleCount(minutes) {
+  const interval = parseInt(config.INTERVAL); // '5m' => 5
+  return Math.max(1, Math.floor(minutes / interval));
+}
+
 function calculateRSI(closes) {
   return RSI.calculate({
-    period: config.RSI_PERIOD,
+    period: getCandleCount(config.RSI_PERIOD),
     values: closes
   }).at(-1);
 }
 
-function calculateEMA(closes, period) {
+function calculateEMA(closes, periodMinutes) {
   return EMA.calculate({
-    period,
+    period: getCandleCount(periodMinutes),
     values: closes
   }).at(-1);
 }
 
 function calculateEMACrossover(closes) {
-  const fast = EMA.calculate({ period: config.EMA_FAST, values: closes });
-  const slow = EMA.calculate({ period: config.EMA_SLOW, values: closes });
+  const fast = EMA.calculate({ period: getCandleCount(config.EMA_FAST), values: closes });
+  const slow = EMA.calculate({ period: getCandleCount(config.EMA_SLOW), values: closes });
   if (fast.length < 2 || slow.length < 2) return null;
   const crossover = fast.at(-2) < slow.at(-2) && fast.at(-1) > slow.at(-1);
   const crossunder = fast.at(-2) > slow.at(-2) && fast.at(-1) < slow.at(-1);
@@ -26,9 +32,9 @@ function calculateEMACrossover(closes) {
 
 function calculateMACD(closes) {
   const res = MACD.calculate({
-    fastPeriod: config.MACD_FAST,
-    slowPeriod: config.MACD_SLOW,
-    signalPeriod: config.MACD_SIGNAL,
+    fastPeriod: getCandleCount(config.MACD_FAST),
+    slowPeriod: getCandleCount(config.MACD_SLOW),
+    signalPeriod: getCandleCount(config.MACD_SIGNAL),
     SimpleMAOscillator: false,
     SimpleMASignal: false,
     values: closes
@@ -38,7 +44,7 @@ function calculateMACD(closes) {
 
 function calculateATR(highs, lows, closes) {
   return ATR.calculate({
-    period: config.ATR_PERIOD,
+    period: getCandleCount(config.ATR_PERIOD),
     high: highs,
     low: lows,
     close: closes
@@ -47,7 +53,7 @@ function calculateATR(highs, lows, closes) {
 
 function calculateADX(highs, lows, closes) {
   return ADX.calculate({
-    period: config.ADX_PERIOD,
+    period: getCandleCount(config.ADX_PERIOD),
     high: highs,
     low: lows,
     close: closes
@@ -55,7 +61,7 @@ function calculateADX(highs, lows, closes) {
 }
 
 function calculateMeanReversion(closes) {
-  const maPeriod = config.MEAN_REVERSION_MA_PERIOD;
+  const maPeriod = getCandleCount(config.MEAN_REVERSION_MA_PERIOD);
   if (closes.length < maPeriod) return null;
 
   const ma = closes.slice(-maPeriod).reduce((a, b) => a + b, 0) / maPeriod;
@@ -71,9 +77,7 @@ function calculateMeanReversion(closes) {
 }
 
 function calculateVolumeSpike(volumes) {
-  const intervalMinutes = parseInt(config.INTERVAL); // '5m' → 5
-  const lookbackCandles = Math.floor(config.VOLUME_LOOKBACK / intervalMinutes);
-
+  const lookbackCandles = getCandleCount(config.VOLUME_LOOKBACK);
   if (volumes.length < lookbackCandles) return { recentVolume: 0, avgVolume: 0, spike: 0, isSpike: false };
 
   const recentVolume = volumes.at(-1);
