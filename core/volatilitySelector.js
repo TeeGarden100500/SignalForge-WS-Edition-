@@ -46,6 +46,10 @@ function initVolatilityWatcher() {
   });
 
   ws.on('message', (msg) => {
+
+    if (config.DEBUG_LOGGING) {
+  console.log(`[VOLATILITY] Ticker received: ${data.length}`);
+}
     const data = JSON.parse(msg);
 
     if (!Array.isArray(data)) return;
