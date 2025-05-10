@@ -18,7 +18,7 @@ module.exports = {
 
   // ░░░ Mean Reversion ░░░
   MEAN_REVERSION_MA_PERIOD: 20,
-  MEAN_REVERSION_THRESHOLD: 3.0, // В % отклонения от MA
+  MEAN_REVERSION_THRESHOLD: 2.0, // В % отклонения от MA
 
   // ░░░ ATR ░░░
   ATR_PERIOD: 14,
@@ -30,7 +30,7 @@ module.exports = {
 
   // ░░░ Объем ░░░
   VOLUME_LOOKBACK: 20,               // Сколько свечей брать для расчета среднего объема
-  VOLUME_SPIKE_MULTIPLIER: 2.0,      // Минимум во сколько раз объем должен превышать средний
+  VOLUME_SPIKE_MULTIPLIER: 3.0,      // Минимум во сколько раз объем должен превышать средний
 
   // ░░░ Пробой ░░░
   BREAKOUT_LOOKBACK: 10,             // За сколько свечей назад искать экстремумы
