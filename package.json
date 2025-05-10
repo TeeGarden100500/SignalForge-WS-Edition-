@@ -1,0 +1,26 @@
+{
+  "name": "signalforge-ws",
+  "version": "1.0.0",
+  "description": "Intraday crypto signal generator using WebSocket and technical indicators",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "technicalindicators": "^3.0.2",
+    "ws": "^8.13.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "keywords": [
+    "crypto",
+    "signals",
+    "binance",
+    "websocket",
+    "trading",
+    "background-worker"
+  ],
+  "author": "Антон + ChatGPT",
+  "license": "MIT"
+}
