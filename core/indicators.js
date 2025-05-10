@@ -1,6 +1,4 @@
 const config = require('../config/config');
-
-// Индикаторы
 const { EMA, RSI, MACD, ATR, ADX } = require('technicalindicators');
 
 function calculateRSI(closes) {
@@ -39,5 +37,50 @@ function calculateMACD(closes) {
 }
 
 function calculateATR(highs, lows, closes) {
-  return
+  return ATR.calculate({
+    period: config.ATR_PERIOD,
+    high: highs,
+    low: lows,
+    close: closes
+  }).at(-1);
 }
+
+function calculateADX(highs, lows, closes) {
+  return ADX.calculate({
+    period: config.ADX_PERIOD,
+    high: highs,
+    low: lows,
+    close: closes
+  }).at(-1)?.adx;
+}
+
+function calculateMeanReversion(closes) {
+  const maPeriod = config.MEAN_REVERSION_MA_PERIOD;
+  if (closes.length < maPeriod) return null;
+
+  const ma = closes.slice(-maPeriod).reduce((a, b) => a + b, 0) / maPeriod;
+  const lastClose = closes.at(-1);
+  const diffPercent = ((lastClose - ma) / ma) * 100;
+
+  return {
+    ma,
+    lastClose,
+    diffPercent,
+    isDiverged: Math.abs(diffPercent) >= config.MEAN_REVERSION_THRESHOLD
+  };
+}
+
+function calculateVolumeSpike(volumes) {
+  const recentVolume = volumes.at(-1);
+  const avgVolume = volumes.slice(-config.VOLUME_LOOKBACK).reduce((a, b) => a + b, 0) / config.VOLUME_LOOKBACK;
+  return {
+    recentVolume,
+    avgVolume,
+    spike: recentVolume / avgVolume,
+    isSpike: recentVolume / avgVolume >= config.VOLUME_SPIKE_MULTIPLIER
+  };
+}
+
+module.exports = {
+  calculateRSI,
+  calculateEMA,
