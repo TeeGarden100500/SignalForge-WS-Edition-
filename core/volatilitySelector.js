@@ -17,8 +17,6 @@ function getTopVolatilePairs() {
   const volMap = {};
   for (const symbol of Object.keys(candles)) {
     volMap[symbol] = calculateVolatility(symbol);
-    if (config.DEBUG_LOGGING) {
-  console.log(`[VOLATILITY] Top pairs: ${topPairs.slice(0, 5).join(', ')} ...`);
   }
   }
 
