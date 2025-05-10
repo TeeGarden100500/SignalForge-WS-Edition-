@@ -55,9 +55,13 @@ function initWebSocket() {
             price: candle.close
           };
 
-          if (config.DEBUG_LOGGING) {
-            console.log('[SIGNAL]', JSON.stringify(signal, null, 2));
+        if (config.DEBUG_LOGGING) {
+          console.log('[SIGNAL]', JSON.stringify(signal, null, 2));
           }
+
+          const { sendWebhook } = require('../webhook/webhookSender');
+          sendWebhook(signal);
+
 
           // TODO: В будущем — отправка через webhookSender.js
         }
