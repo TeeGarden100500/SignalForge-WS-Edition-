@@ -18,7 +18,7 @@ module.exports = {
 
   // ░░░ Mean Reversion ░░░
   MEAN_REVERSION_MA_PERIOD: 20,
-  MEAN_REVERSION_THRESHOLD: 2.0, // В % отклонения от MA
+  MEAN_REVERSION_THRESHOLD: 3.0, // В % отклонения от MA
 
   // ░░░ ATR ░░░
   ATR_PERIOD: 14,
