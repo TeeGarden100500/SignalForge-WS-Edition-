@@ -22,6 +22,9 @@ function connectWS(pairs) {
 
   ws.on('open', () => {
     console.log('[WS] Connected to Binance for pairs:', pairs.join(', '));
+    if (config.DEBUG_LOGGING) {
+  console.log(`[WS] Подключились к ${pairs.length} парам: ${pairs.slice(0, 5).join(', ')} ...`);
+  }
   });
 
   ws.on('message', (data) => {
@@ -46,6 +49,9 @@ function connectWS(pairs) {
       candleCache[symbol].push(candle);
       if (candleCache[symbol].length > config.MAX_CACHE_LENGTH) {
         candleCache[symbol].shift();
+        if (config.DEBUG_LOGGING) {
+      console.log(`[CANDLE] ${symbol} close=${candle.close}`);
+      }
       }
 
       const triggers = applyStrategies(symbol, candleCache[symbol]);
