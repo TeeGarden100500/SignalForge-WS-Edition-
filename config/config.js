@@ -53,8 +53,8 @@ module.exports = {
 
   
   // ░░░ Волатильность ░░░
-  VOLATILITY_TOP_COUNT: 20,             // Сколько монет отбирать
-  VOLATILITY_TIMEFRAME: '5m',           // Какой таймфрейм использовать для анализа
+  VOLATILITY_TOP_COUNT: 50,             // Сколько монет отбирать
+  VOLATILITY_TIMEFRAME: '1m',           // Какой таймфрейм использовать для анализа
   VOLATILITY_LOOKBACK: 12,              // Сколько свечей анализировать (12×5m = 1 час)
   VOLATILITY_REFRESH_INTERVAL_SEC: 300  // Как часто обновлять топ (в секундах)
 };
