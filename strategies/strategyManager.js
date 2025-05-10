@@ -49,7 +49,11 @@ function applyStrategies(pair, candles) {
   if (adx !== undefined && adx < config.MIN_ADX) {
     return []; // Тренд слабый — сигналы игнорируются
   }
-
+  
+  if (results.length > 0 && config.DEBUG_LOGGING) {
+  console.log(`[CHECK] ${pair}: сработали стратегии → ${results.join(', ')}`);
+  }
+  
   return results;
 }
 
