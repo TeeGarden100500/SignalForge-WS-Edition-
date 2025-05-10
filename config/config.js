@@ -18,7 +18,7 @@ module.exports = {
   MACD_SIGNAL: 9,
 
   // ░░░ Mean Reversion ░░░
-  MEAN_REVERSION_MA_PERIOD: 90,  // 90 минут
+  MEAN_REVERSION_MA_PERIOD: 30,  // 90 минут
   MEAN_REVERSION_THRESHOLD: 2.0, // %
 
   // ░░░ ATR ░░░
@@ -34,7 +34,7 @@ module.exports = {
   VOLUME_SPIKE_MULTIPLIER: 3.0,  // x раз превышения
 
   // ░░░ Пробой ░░░
-  BREAKOUT_LOOKBACK: 30,         // 30 минут назад
+  BREAKOUT_LOOKBACK: 10,         // 10 минут назад
   BREAKOUT_MARGIN_PERCENT: 0.2,
 
   // ░░░ Фильтрация сигналов ░░░
@@ -55,6 +55,6 @@ module.exports = {
   // ░░░ Волатильность ░░░
   VOLATILITY_TOP_COUNT: 50,
   VOLATILITY_TIMEFRAME: '5m',
-  VOLATILITY_LOOKBACK: 60,              // 60 минут анализа
+  VOLATILITY_LOOKBACK: 20,              // 60 минут анализа
   VOLATILITY_REFRESH_INTERVAL_SEC: 300  // раз в 5 минут
 };
