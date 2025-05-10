@@ -30,7 +30,6 @@ function getTopVolatilePairs() {
   if (config.DEBUG_LOGGING) {
     console.log('[VOLATILITY] Updated top pairs:', topPairs.join(', '));
   }
-}
 
 function initVolatilityWatcher() {
   const tf = config.VOLATILITY_TIMEFRAME;
