@@ -94,6 +94,7 @@ function monitorPairs() {
     const newPairs = getTopPairs();
     const changed = JSON.stringify(newPairs) !== JSON.stringify(currentPairs);
     if (newPairs.length > 0 && changed) {
+      console.log('[CHECK] topPairs:', getTopPairs().length);
       currentPairs = [...newPairs];
       connectWS(currentPairs);
     }
