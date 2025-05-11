@@ -45,7 +45,7 @@ module.exports = {
   },
 
   // ░░░ Webhook ░░░
-  WEBHOOK_URL: 'https://webhook.site/your-url',
+  WEBHOOK_URL: 'https://webhook.site/b5170fa9-7272-431f-8eeb-66d1e4bc4eec',
   ENABLE_WEBHOOK: true,
 
   // ░░░ Логика и кэш ░░░
