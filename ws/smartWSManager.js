@@ -4,6 +4,8 @@ const { addCandle } = require('./candlesCache');
 const { applyStrategies } = require('../strategies/strategyManager');
 const { sendWebhook } = require('../webhook/webhookSender');
 const config = require('../config/config');
+const score = signal.triggers.length;
+const emoji = score >= 5 ? '🟢' : score >= 3 ? '🟡' : '🔴';
 
 const MAX_STREAMS = 50;
 const connections = new Map(); // symbol → WebSocket
@@ -55,7 +57,7 @@ function subscribeToSymbol(symbol) {
           };
 
           if (config.DEBUG_LOGGING) {
-            console.log(`⚡️[SIGNAL] ${signal.pair}:\\n  ` + signal.triggers.join('\\n  '));
+            console.log(`⚡ [SIGNAL • ${emoji} ${score}/7] ${signal.pair}:\n  ` + signal.triggers.join('\n  '));
           }
 
           sendWebhook(signal);
