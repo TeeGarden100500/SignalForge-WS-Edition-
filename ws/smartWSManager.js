@@ -1,9 +1,9 @@
-
 const WebSocket = require('ws');
 const { addCandle, getCandles } = require('./multiCandleCache');
 const { applyStrategies } = require('../strategies/strategyManager');
 const { getTopPairs } = require('../core/volatilitySelector');
 const config = require('../config/config');
+const logger = require('../logger');
 
 let activeConnections = new Map();
 
@@ -35,24 +35,26 @@ function subscribeToSymbol(symbol) {
 
         const candles5m = getCandles(k.s, '5m');
         const candles1m = getCandles(k.s, '1m');
-        if (candles5m.length < 10 || candles1m.length < 10) return;
+        if (candles5m.length < 10 || candles1m.length < 10) {
+          logger.debug(`[SKIP] ${k.s}: мало свечей (1m=${candles1m.length}, 5m=${candles5m.length})`);
+          return;
+        }
 
-        console.log(`[DEBUG] Проверяем стратегию для ${k.s} (интервал: ${k.i})`);
+        logger.debug(`[STRATEGY] Проверка ${k.s} (интервал: ${k.i})`);
         const triggers = applyStrategies(k.s);
-        console.log(`[DEBUG] Триггеры:`, triggers);
+        logger.debug(`[TRIGGERS] ${k.s}:`, triggers);
+
         if (triggers.length >= config.SIGNAL_CONFIRMATION_COUNT) {
-          console.log(`\n⚡ [SIGNAL] ${k.s} @ ${new Date().toISOString()}\n` + triggers.join('\n') + '\n');
+          logger.log(`\n⚡ [SIGNAL] ${k.s} @ ${new Date().toISOString()}\n` + triggers.join('\n') + '\n');
         }
       }
     } catch (err) {
-      if (config.DEBUG_LOGGING) {
-        console.error(`[WS] Ошибка при обработке сообщения:`, err.message);
-      }
+      logger.error(`[WS] Ошибка обработки сообщения:`, err.message);
     }
   });
 
   ws.on('error', (err) => {
-    console.error(`[WS] Ошибка подключения к ${symbol}:`, err.message);
+    logger.error(`[WS] Ошибка подключения к ${symbol}:`, err.message);
   });
 
   activeConnections.set(symbol, ws);
@@ -72,7 +74,7 @@ function updateSubscriptions(newSymbols) {
     }
   }
 
-  console.log(`[WS] Подписка завершена. Всего подключено пар: ${activeConnections.size}`);
+  logger.log(`[WS] Подписка завершена. Всего пар: ${activeConnections.size}`);
 }
 
 function monitorTopPairs() {
@@ -91,19 +93,18 @@ function startWSManager() {
   monitorTopPairs();
 }
 
-// ⏱️ Лог для контроля накопления свечей каждые 5 минут
 setInterval(() => {
   const allSymbols = Object.keys(require('./multiCandleCache').cache || {});
   if (allSymbols.length === 0) return;
 
-  console.log('\n[CACHE STATUS] Готовность к сигналам:');
+  logger.log('\n[CACHE STATUS] Готовность к сигналам:');
   for (const symbol of allSymbols) {
     const c1 = getCandles(symbol, '1m').length;
     const c5 = getCandles(symbol, '5m').length;
     const c10 = getCandles(symbol, '10m').length;
-    console.log(`${symbol} — 1m: ${c1}/10, 5m: ${c5}/10, 10m: ${c10}/10`);
+    logger.log(`${symbol} — 1m: ${c1}/10, 5m: ${c5}/10, 10m: ${c10}/10`);
   }
-  console.log('');
+  logger.log('');
 }, 5 * 60 * 1000);
 
 module.exports = { startWSManager };
