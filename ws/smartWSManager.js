@@ -16,10 +16,6 @@ function subscribeToSymbol(symbol) {
   const streamUrl = `wss://stream.binance.com:9443/stream?streams=${streams.join('/')}`;
   const ws = new WebSocket(streamUrl);
 
-  ws.on('open', () => {
-    if (config.DEBUG_LOGGING) console.log(`[WS] Подписка на ${symbol}`);
-  });
-
   ws.on('message', (raw) => {
     try {
       const data = JSON.parse(raw);
