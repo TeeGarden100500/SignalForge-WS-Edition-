@@ -52,6 +52,14 @@ module.exports = {
   MAX_CACHE_LENGTH: 500,
   DEBUG_LOGGING: true,
 
+
+
+  // ░░░ EMA Impulse Angle ░░░
+  EMA_ANGLE_PERIOD: 5,         // сколько свечей назад сравнивать
+  EMA_ANGLE_THRESHOLD: 0.0002, // минимальное отклонение по цене
+  EMA_ANGLE_LENGTH: 10         // период EMA для оценки движения
+
+
   // ░░░ Волатильность ░░░
   VOLATILITY_TOP_COUNT: 50,
   VOLATILITY_TIMEFRAME: '5m',
