@@ -16,7 +16,7 @@ function calculateVolatility(symbol) {
   if (!open || !high || !low) return 0;
 
   const result = ((high - low) / open) * 100;
-  logger.debug(`[VOLATILITY] ${symbol}: high=${high}, low=${low}, open=${open} → vol=${result.toFixed(2)}%`);
+  // logger.debug(`[VOLATILITY] ${symbol}: high=${high}, low=${low}, open=${open} → vol=${result.toFixed(2)}%`);
   return result;
 }
 
