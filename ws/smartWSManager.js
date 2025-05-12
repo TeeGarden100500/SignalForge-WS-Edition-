@@ -3,7 +3,7 @@ const { addCandle, getCandles } = require('./multiCandleCache');
 const { applyStrategies } = require('../strategies/strategyManager');
 const { getTopPairs } = require('../core/volatilitySelector');
 const config = require('../config/config');
-const logger = require('../logger');
+const logger = require('../config/logger');
 
 let activeConnections = new Map();
 
