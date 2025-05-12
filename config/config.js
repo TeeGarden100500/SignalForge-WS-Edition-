@@ -40,8 +40,8 @@ module.exports = {
   // ░░░ Фильтрация сигналов ░░░
   SIGNAL_CONFIRMATION_COUNT: 2,
   SIGNAL_TIME_WINDOW_UTC: {
-    start: '07:00',
-    end: '19:00'
+    start: '06:00',
+    end: '23:00'
   },
 
   // ░░░ Webhook ░░░
