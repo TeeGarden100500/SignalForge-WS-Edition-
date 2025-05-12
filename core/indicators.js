@@ -21,6 +21,13 @@ function calculateEMA(closes, periodMinutes) {
   }).at(-1);
 }
 
+function calculateEMAChange(closes, periodMinutes, stepsBack) {
+  const period = getCandleCount(periodMinutes);
+  const emaSeries = EMA.calculate({ period, values: closes });
+  if (emaSeries.length <= stepsBack) return 0;
+  return emaSeries.at(-1) - emaSeries.at(-1 - stepsBack);
+}
+
 function calculateEMACrossover(closes) {
   const fast = EMA.calculate({ period: getCandleCount(config.EMA_FAST), values: closes });
   const slow = EMA.calculate({ period: getCandleCount(config.EMA_SLOW), values: closes });
@@ -94,6 +101,7 @@ function calculateVolumeSpike(volumes) {
 module.exports = {
   calculateRSI,
   calculateEMA,
+  calculateEMAChange,
   calculateEMACrossover,
   calculateMACD,
   calculateATR,
