@@ -41,7 +41,9 @@ function subscribeToSymbol(symbol) {
         const candles1m = getCandles(k.s, '1m');
         if (candles5m.length < 10 || candles1m.length < 10) return;
 
+        console.log(`[DEBUG] Проверяем стратегию для ${k.s} (интервал: ${k.i})`);
         const triggers = applyStrategies(k.s);
+        console.log(`[DEBUG] Триггеры:`, triggers);
         if (triggers.length >= config.SIGNAL_CONFIRMATION_COUNT) {
           console.log(`\n⚡ [SIGNAL] ${k.s} @ ${new Date().toISOString()}\n` + triggers.join('\n') + '\n');
         }
@@ -75,10 +77,6 @@ function updateSubscriptions(newSymbols) {
   }
 
   console.log(`[WS] Подписка завершена. Всего подключено пар: ${activeConnections.size}`);
-if (config.DEBUG_LOGGING) {
-  console.log(`[WS] Монеты: ${[...activeConnections.keys()].join(', ')}`);
-}
-
 }
 
 function monitorTopPairs() {
