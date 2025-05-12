@@ -45,7 +45,7 @@ function subscribeToSymbol(symbol) {
         logger.debug(`[TRIGGERS] ${k.s}:`, triggers);
 
         if (triggers.length >= config.SIGNAL_CONFIRMATION_COUNT) {
-          logger.log(`\n⚡ [SIGNAL] ${k.s} @ ${new Date().toISOString()}\n` + triggers.join('\n') + '\n');
+          console.log(`\n⚡ [SIGNAL] ${k.s} @ ${new Date().toISOString()}\n` + triggers.join('\n') + '\n');
         }
       }
     } catch (err) {
