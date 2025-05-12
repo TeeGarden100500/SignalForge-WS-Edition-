@@ -1,47 +1,47 @@
 
 module.exports = {
   // ░░░ Таймфрейм ░░░
-  INTERVAL: '5m', // Используется в WebSocket и расчетах
+  INTERVAL: '5m',
 
   // ░░░ RSI ░░░
-  RSI_PERIOD: 60,         // 60 минут истории
-  RSI_LOW: 30,
-  RSI_HIGH: 70,
+  RSI_PERIOD: 60,
+  RSI_LOW: 40,
+  RSI_HIGH: 60,
 
   // ░░░ EMA Crossover ░░░
-  EMA_FAST: 21,           // 21 минута
-  EMA_SLOW: 55,           // 55 минут
+  EMA_FAST: 8,
+  EMA_SLOW: 21,
 
   // ░░░ MACD ░░░
-  MACD_FAST: 12,          // 12 минут EMA
-  MACD_SLOW: 26,
-  MACD_SIGNAL: 9,
+  MACD_FAST: 6,
+  MACD_SLOW: 13,
+  MACD_SIGNAL: 4,
 
   // ░░░ Mean Reversion ░░░
-  MEAN_REVERSION_MA_PERIOD: 90,  // 90 минут
-  MEAN_REVERSION_THRESHOLD: 2.0, // %
+  MEAN_REVERSION_MA_PERIOD: 30,
+  MEAN_REVERSION_THRESHOLD: 0.5,
 
   // ░░░ ATR ░░░
-  ATR_PERIOD: 30,
-  MIN_ATR_PERCENT: 0.4,
+  ATR_PERIOD: 14,
+  MIN_ATR_PERCENT: 0.1,
 
   // ░░░ ADX ░░░
-  ADX_PERIOD: 30,
-  MIN_ADX: 20,
+  ADX_PERIOD: 14,
+  MIN_ADX: 5,
 
   // ░░░ Объем ░░░
-  VOLUME_LOOKBACK: 20,           // В минутах
-  VOLUME_SPIKE_MULTIPLIER: 2.5,  // x раз превышения
+  VOLUME_LOOKBACK: 5,
+  VOLUME_SPIKE_MULTIPLIER: 1.2,
 
   // ░░░ Пробой ░░░
-  BREAKOUT_LOOKBACK: 300,         // 10 минут назад
-  BREAKOUT_MARGIN_PERCENT: 0.2,
+  BREAKOUT_LOOKBACK: 60,
+  BREAKOUT_MARGIN_PERCENT: 0.05,
 
   // ░░░ Фильтрация сигналов ░░░
-  SIGNAL_CONFIRMATION_COUNT: 2,
+  SIGNAL_CONFIRMATION_COUNT: 1,
   SIGNAL_TIME_WINDOW_UTC: {
-    start: '06:00',
-    end: '23:00'
+    start: '00:00',
+    end: '23:59'
   },
 
   // ░░░ Webhook ░░░
@@ -52,16 +52,13 @@ module.exports = {
   MAX_CACHE_LENGTH: 500,
   DEBUG_LOGGING: true,
 
-
-
   // ░░░ EMA Impulse Angle ░░░
-  EMA_ANGLE_PERIOD: 5,         // сколько свечей назад сравнивать
-  EMA_ANGLE_THRESHOLD: 0.0002, // минимальное отклонение по цене
-  EMA_ANGLE_LENGTH: 10 ,        // период EMA для оценки движения
-
+  EMA_ANGLE_PERIOD: 3,
+  EMA_ANGLE_THRESHOLD: 0.00005,
+  EMA_ANGLE_LENGTH: 5,
 
   // ░░░ Волатильность ░░░
   VOLATILITY_TOP_COUNT: 50,
-  VOLATILITY_LOOKBACK: 60,              // 60 минут анализа
-  VOLATILITY_REFRESH_INTERVAL_SEC: 21600  // раз в 6 часов
+  VOLATILITY_LOOKBACK: 30,
+  VOLATILITY_REFRESH_INTERVAL_SEC: 3600
 };
