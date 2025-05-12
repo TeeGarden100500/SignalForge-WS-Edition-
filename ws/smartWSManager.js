@@ -124,9 +124,99 @@ module.exports = {
 };
 
 
-// ⏱️ Лог для контроля накопления свечей каждые 5 минут
-const { getCandles } = require('./multiCandleCache');
+const WebSocket = require('ws');
+const { addCandle, getCandles } = require('./multiCandleCache');
+const { applyStrategies } = require('../strategies/strategyManager');
+const { getTopPairs } = require('../core/volatilitySelector');
+const config = require('../config/config');
 
+let activeConnections = new Map();
+
+function subscribeToSymbol(symbol) {
+  const streams = [
+    `${symbol.toLowerCase()}@kline_1m`,
+    `${symbol.toLowerCase()}@kline_5m`,
+    `${symbol.toLowerCase()}@kline_10m`
+  ];
+  const streamUrl = `wss://stream.binance.com:9443/stream?streams=${streams.join('/')}`;
+  const ws = new WebSocket(streamUrl);
+
+  ws.on('open', () => {
+    if (config.DEBUG_LOGGING) console.log(`[WS] Подписка на ${symbol}`);
+  });
+
+  ws.on('message', (raw) => {
+    try {
+      const data = JSON.parse(raw);
+      const { e, k } = data.data || {};
+
+      if (e === 'kline' && k && k.x) {
+        const candle = {
+          time: k.t,
+          open: parseFloat(k.o),
+          high: parseFloat(k.h),
+          low: parseFloat(k.l),
+          close: parseFloat(k.c),
+          volume: parseFloat(k.v)
+        };
+
+        addCandle(k.s, k.i, candle);
+        const candles5m = getCandles(k.s, '5m');
+        const candles1m = getCandles(k.s, '1m');
+        if (candles5m.length < 10 || candles1m.length < 10) return;
+
+        const triggers = applyStrategies(k.s);
+        if (triggers.length >= config.SIGNAL_CONFIRMATION_COUNT) {
+          console.log(`\n⚡ [SIGNAL] ${k.s} @ ${new Date().toISOString()}\n` + triggers.join('\n') + '\n');
+        }
+      }
+    } catch (err) {
+      console.error(`[WS] Ошибка при обработке сообщения:`, err.message);
+    }
+  });
+
+  ws.on('error', (err) => {
+    console.error(`[WS] Ошибка подключения к ${symbol}:`, err.message);
+  });
+
+  activeConnections.set(symbol, ws);
+}
+
+function updateSubscriptions(newSymbols) {
+  for (const [symbol, socket] of activeConnections.entries()) {
+    if (!newSymbols.includes(symbol)) {
+      socket.close();
+      activeConnections.delete(symbol);
+    }
+  }
+
+  for (const symbol of newSymbols) {
+    if (!activeConnections.has(symbol)) {
+      subscribeToSymbol(symbol);
+    }
+  }
+
+  if (config.DEBUG_LOGGING) {
+    console.log(`[WS] Подписка завершена. Всего подключено пар: ${activeConnections.size}`);
+  }
+}
+
+function monitorTopPairs() {
+  setInterval(() => {
+    const latest = getTopPairs();
+    if (!latest || latest.length === 0) return;
+
+    const changed = JSON.stringify(latest.slice(0, config.VOLATILITY_TOP_COUNT)) !== JSON.stringify([...activeConnections.keys()]);
+    if (changed) updateSubscriptions(latest);
+  }, 60000);
+}
+
+function startWSManager() {
+  updateSubscriptions(getTopPairs());
+  monitorTopPairs();
+}
+
+// ⏱️ Лог для контроля накопления свечей каждые 5 минут
 setInterval(() => {
   const allSymbols = Object.keys(require('./multiCandleCache').cache || {});
   if (allSymbols.length === 0) return;
@@ -140,3 +230,5 @@ setInterval(() => {
   }
   console.log('');
 }, 5 * 60 * 1000);
+
+module.exports = { startWSManager };
