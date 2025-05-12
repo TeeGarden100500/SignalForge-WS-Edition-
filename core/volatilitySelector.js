@@ -1,6 +1,6 @@
-
 const WebSocket = require('ws');
 const config = require('../config/config');
+const logger = require('../logger');
 
 let topPairs = [];
 const snapshot = {}; // { symbol: { o, h, l } }
@@ -15,7 +15,9 @@ function calculateVolatility(symbol) {
 
   if (!open || !high || !low) return 0;
 
-  return ((high - low) / open) * 100;
+  const result = ((high - low) / open) * 100;
+  logger.debug(`[VOLATILITY] ${symbol}: high=${high}, low=${low}, open=${open} → vol=${result.toFixed(2)}%`);
+  return result;
 }
 
 function getTopVolatilePairs() {
@@ -33,22 +35,19 @@ function getTopVolatilePairs() {
 
   topPairs = sorted;
 
-  if (config.DEBUG_LOGGING) {
-    console.log(`[VOLATILITY] Top pairs (24h volatility): ${topPairs.slice(0, 10).join(', ')} ...`);
-  }
+  logger.log(`[VOLATILITY] Топ-${config.VOLATILITY_TOP_COUNT} по суточной волатильности: ${topPairs.join(', ')}`);
 }
 
 function initVolatilityWatcher() {
   const ws = new WebSocket('wss://stream.binance.com:9443/ws/!ticker@arr');
 
   ws.on('open', () => {
-    console.log('[VOLATILITY] Connected to !ticker@arr stream');
+    logger.log('[VOLATILITY] Подключено к потоку !ticker@arr');
 
-    // Обновлять topPairs раз в 6 часов (или из config)
     setTimeout(() => {
-  getTopVolatilePairs(); // 🔥 запуск через 10 секунд
-  setInterval(getTopVolatilePairs, config.VOLATILITY_REFRESH_INTERVAL_SEC * 1000);
-}, 10000);
+      getTopVolatilePairs();
+      setInterval(getTopVolatilePairs, config.VOLATILITY_REFRESH_INTERVAL_SEC * 1000);
+    }, 10000);
   });
 
   ws.on('message', (msg) => {
@@ -65,14 +64,15 @@ function initVolatilityWatcher() {
         l: ticker.l
       };
     }
+    logger.debug(`[VOLATILITY] Обновлены данные по ${data.length} монетам`);
   });
 
   ws.on('error', (err) => {
-    console.error('[VOLATILITY] Error:', err.message);
+    logger.error('[VOLATILITY] Ошибка WebSocket:', err.message);
   });
 
   ws.on('close', () => {
-    console.log('[VOLATILITY] Disconnected. Reconnecting...');
+    logger.warn('[VOLATILITY] Отключение от потока. Переподключение через 5 сек...');
     setTimeout(initVolatilityWatcher, 5000);
   });
 }
