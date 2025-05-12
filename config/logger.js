@@ -1,5 +1,5 @@
-
-const config = require('../config/config');
+// 📁 src/logger.js
+const config = require('./config');
 
 function log(...args) {
   if (config.DEBUG_LOG_LEVEL !== 'none') {
@@ -8,6 +8,7 @@ function log(...args) {
 }
 
 function debug(...args) {
+  if (config.DEBUG_LOG_LEVEL === 'none') return;
   if (config.DEBUG_LOG_LEVEL === 'verbose') {
     console.debug('[DEBUG]', ...args);
   }
