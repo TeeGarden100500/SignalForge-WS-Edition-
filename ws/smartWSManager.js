@@ -1,6 +1,6 @@
 const WebSocket = require('ws');
 const { getTopPairs } = require('../core/volatilitySelector');
-const { addCandle } = require('./multiCandleCache');
+const { addCandle, getCandles } = require('./multiCandleCache');
 const { applyStrategies } = require('../strategies/strategyManager');
 const { sendWebhook } = require('../webhook/webhookSender');
 const config = require('../config/config');
