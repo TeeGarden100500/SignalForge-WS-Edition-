@@ -62,7 +62,6 @@ module.exports = {
 
   // ░░░ Волатильность ░░░
   VOLATILITY_TOP_COUNT: 50,
-  VOLATILITY_TIMEFRAME: '5m',
   VOLATILITY_LOOKBACK: 60,              // 60 минут анализа
-  VOLATILITY_REFRESH_INTERVAL_SEC: 300  // раз в 5 минут
+  VOLATILITY_REFRESH_INTERVAL_SEC: 21600  // раз в 6 часов
 };
