@@ -122,3 +122,21 @@ function startWSManager() {
 module.exports = {
   startWSManager
 };
+
+
+// ⏱️ Лог для контроля накопления свечей каждые 5 минут
+const { getCandles } = require('./multiCandleCache');
+
+setInterval(() => {
+  const allSymbols = Object.keys(require('./multiCandleCache').cache || {});
+  if (allSymbols.length === 0) return;
+
+  console.log('\n[CACHE STATUS] Готовность к сигналам:');
+  for (const symbol of allSymbols) {
+    const c1 = getCandles(symbol, '1m').length;
+    const c5 = getCandles(symbol, '5m').length;
+    const c10 = getCandles(symbol, '10m').length;
+    console.log(`${symbol} — 1m: ${c1}/10, 5m: ${c5}/10, 10m: ${c10}/10`);
+  }
+  console.log('');
+}, 5 * 60 * 1000);
