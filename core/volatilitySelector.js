@@ -45,7 +45,10 @@ function initVolatilityWatcher() {
     console.log('[VOLATILITY] Connected to !ticker@arr stream');
 
     // Обновлять topPairs раз в 6 часов (или из config)
-    setInterval(getTopVolatilePairs, config.VOLATILITY_REFRESH_INTERVAL_SEC * 1000);
+    setTimeout(() => {
+  getTopVolatilePairs(); // 🔥 запуск через 10 секунд
+  setInterval(getTopVolatilePairs, config.VOLATILITY_REFRESH_INTERVAL_SEC * 1000);
+}, 10000);
   });
 
   ws.on('message', (msg) => {
