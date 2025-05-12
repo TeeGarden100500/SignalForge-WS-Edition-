@@ -1,6 +1,6 @@
 // 📁 src/multiCandleCache.js
 const config = require('../config/config');
-const logger = require('../logger');
+const logger = require('../config/logger');
 
 const multiCandleCache = {}; // { symbol: { interval: [candles] } }
 
