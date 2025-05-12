@@ -64,7 +64,7 @@ function initVolatilityWatcher() {
         l: ticker.l
       };
     }
-    logger.debug(`[VOLATILITY] Обновлены данные по ${data.length} монетам`);
+//    logger.debug(`[VOLATILITY] Обработано USDT-монет: ${Object.keys(snapshot).length}`);
   });
 
   ws.on('error', (err) => {
