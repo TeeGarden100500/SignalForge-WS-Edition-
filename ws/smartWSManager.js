@@ -123,12 +123,6 @@ module.exports = {
   startWSManager
 };
 
-
-const { addCandle, getCandles } = require('./multiCandleCache');
-const { applyStrategies } = require('../strategies/strategyManager');
-const { getTopPairs } = require('../core/volatilitySelector');
-const config = require('../config/config');
-
 let activeConnections = new Map();
 
 function subscribeToSymbol(symbol) {
