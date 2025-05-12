@@ -1,22 +1,27 @@
+
 const WebSocket = require('ws');
 const config = require('../config/config');
 
 let topPairs = [];
-const candles = {}; // { symbol: [ {open, high, low}, ... ] }
+const snapshot = {}; // { symbol: { o, h, l } }
 
 function calculateVolatility(symbol) {
-  const data = candles[symbol];
-  if (!data || data.length < config.VOLATILITY_LOOKBACK) return 0;
+  const data = snapshot[symbol];
+  if (!data) return 0;
 
-  const vols = data.map(c => (c.high - c.low) / c.open * 100);
-  const avgVol = vols.reduce((a, b) => a + b, 0) / vols.length;
-  return avgVol;
+  const open = parseFloat(data.o);
+  const high = parseFloat(data.h);
+  const low = parseFloat(data.l);
+
+  if (!open || !high || !low) return 0;
+
+  return ((high - low) / open) * 100;
 }
 
 function getTopVolatilePairs() {
   const volMap = {};
 
-  for (const symbol of Object.keys(candles)) {
+  for (const symbol of Object.keys(snapshot)) {
     volMap[symbol] = calculateVolatility(symbol);
   }
 
@@ -29,46 +34,33 @@ function getTopVolatilePairs() {
   topPairs = sorted;
 
   if (config.DEBUG_LOGGING) {
-    console.log(`[VOLATILITY] Top pairs: ${topPairs.slice(0, 5).join(', ')} ...`);
+    console.log(`[VOLATILITY] Top pairs (24h volatility): ${topPairs.slice(0, 10).join(', ')} ...`);
   }
 }
 
 function initVolatilityWatcher() {
-  const tf = config.VOLATILITY_TIMEFRAME;
   const ws = new WebSocket('wss://stream.binance.com:9443/ws/!ticker@arr');
 
-  // На старте — запросим список всех USDT пар
   ws.on('open', () => {
-    console.log('[VOLATILITY] Ticker stream connected');
+    console.log('[VOLATILITY] Connected to !ticker@arr stream');
 
-    // Каждые N секунд — обновляем topPairs
-    setInterval(() => getTopVolatilePairs(), config.VOLATILITY_REFRESH_INTERVAL_SEC * 1000);
+    // Обновлять topPairs раз в 6 часов (или из config)
+    setInterval(getTopVolatilePairs, config.VOLATILITY_REFRESH_INTERVAL_SEC * 1000);
   });
 
-   ws.on('message', (msg) => {
-      const data = JSON.parse(msg);
-//    if (config.DEBUG_LOGGING) {
-//      console.log(`[VOLATILITY] Ticker sample: ${data.s || JSON.stringify(data).slice(0, 100)}`);
-//  }
-
+  ws.on('message', (msg) => {
+    const data = JSON.parse(msg);
     if (!Array.isArray(data)) return;
 
     for (const ticker of data) {
       const symbol = ticker.s;
       if (!symbol.endsWith('USDT')) continue;
 
-      const price = parseFloat(ticker.c);
-      const high = parseFloat(ticker.h);
-      const low = parseFloat(ticker.l);
-      const open = parseFloat(ticker.o);
-
-      if (!candles[symbol]) candles[symbol] = [];
-
-      candles[symbol].push({ open, high, low });
-
-      if (candles[symbol].length > config.VOLATILITY_LOOKBACK) {
-        candles[symbol].shift();
-      }
+      snapshot[symbol] = {
+        o: ticker.o,
+        h: ticker.h,
+        l: ticker.l
+      };
     }
   });
 
