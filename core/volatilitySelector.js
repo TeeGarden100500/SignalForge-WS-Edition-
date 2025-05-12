@@ -1,6 +1,6 @@
 const WebSocket = require('ws');
 const config = require('../config/config');
-const logger = require('../logger');
+const logger = require('../config/logger');
 
 let topPairs = [];
 const snapshot = {}; // { symbol: { o, h, l } }
