@@ -75,6 +75,10 @@ function updateSubscriptions(newSymbols) {
   }
 
   console.log(`[WS] Подписка завершена. Всего подключено пар: ${activeConnections.size}`);
+if (config.DEBUG_LOGGING) {
+  console.log(`[WS] Монеты: ${[...activeConnections.keys()].join(', ')}`);
+}
+
 }
 
 function monitorTopPairs() {
