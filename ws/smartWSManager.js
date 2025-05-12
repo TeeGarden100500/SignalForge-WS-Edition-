@@ -37,8 +37,8 @@ function subscribeToSymbol(symbol) {
 
       addCandle(symbol, candle);
 
-      const candles = require('./candlesCache').getCandles(symbol);
-      const triggers = applyStrategies(symbol, candles);
+        const { applyStrategies } = require('../strategies/strategyManager');
+        const triggers = applyStrategies(symbol);
 
       if (triggers.length >= config.SIGNAL_CONFIRMATION_COUNT) {
         const nowUTC = new Date().toISOString().slice(11, 16);
