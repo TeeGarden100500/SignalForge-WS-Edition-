@@ -124,7 +124,6 @@ module.exports = {
 };
 
 
-const WebSocket = require('ws');
 const { addCandle, getCandles } = require('./multiCandleCache');
 const { applyStrategies } = require('../strategies/strategyManager');
 const { getTopPairs } = require('../core/volatilitySelector');
