@@ -1,397 +1,1590 @@
-[OK] BTCUSDT — HIGH: 109588 / LOW: 49000
-[OK] ETHUSDT — HIGH: 4107.8 / LOW: 1385.05
-[OK] BNBUSDT — HIGH: 793.86 / LOW: 400
-[OK] NEOUSDT — HIGH: 26.21 / LOW: 4.31
-[OK] LTCUSDT — HIGH: 147.06 / LOW: 49.8
-[OK] QTUMUSDT — HIGH: 5.742 / LOW: 1.571
-[OK] ADAUSDT — HIGH: 1.3264 / LOW: 0.2756
-[OK] XRPUSDT — HIGH: 3.4 / LOW: 0.3823
-[OK] EOSUSDT — HIGH: 1.5406 / LOW: 0.4
-[OK] TUSDUSDT — HIGH: 1.22 / LOW: 0.9902
-[OK] IOTAUSDT — HIGH: 0.6328 / LOW: 0.1008
-[OK] XLMUSDT — HIGH: 0.6374 / LOW: 0.0757
-[OK] ONTUSDT — HIGH: 0.3967 / LOW: 0.1099
-[OK] TRXUSDT — HIGH: 0.45 / LOW: 0.11032
-[OK] ETCUSDT — HIGH: 39.97 / LOW: 12.7
-[OK] ICXUSDT — HIGH: 0.2949 / LOW: 0.0002
-[OK] VETUSDT — HIGH: 0.08 / LOW: 0.01771
-[OK] USDCUSDT — HIGH: 1.0051 / LOW: 0.9971
-[OK] LINKUSDT — HIGH: 30.94 / LOW: 8.08
-[OK] ONGUSDT — HIGH: 0.5518 / LOW: 0.144
-[OK] HOTUSDT — HIGH: 0.004085 / LOW: 0.000795
-[OK] ZILUSDT — HIGH: 0.03771 / LOW: 0.00919
-[OK] ZRXUSDT — HIGH: 0.912 / LOW: 0.1925
-[OK] FETUSDT — HIGH: 2.71 / LOW: 0.345
-[OK] BATUSDT — HIGH: 0.3734 / LOW: 0.1078
-[OK] ZECUSDT — HIGH: 79.33 / LOW: 15.78
-[OK] IOSTUSDT — HIGH: 0.012162 / LOW: 0.002833
-[OK] CELRUSDT — HIGH: 0.03244 / LOW: 0.00664
-[OK] DASHUSDT — HIGH: 71.64 / LOW: 17.81
-[OK] THETAUSDT — HIGH: 3.351 / LOW: 0.603
-[OK] ENJUSDT — HIGH: 0.3978 / LOW: 0.0591
-[OK] ATOMUSDT — HIGH: 10.678 / LOW: 3.386
-[OK] TFUELUSDT — HIGH: 0.1176 / LOW: 0.02779
-[OK] ONEUSDT — HIGH: 0.04852 / LOW: 0.00839
-[OK] ALGOUSDT — HIGH: 0.6139 / LOW: 0.0938
-[OK] DOGEUSDT — HIGH: 0.48434 / LOW: 0.0805
-[OK] DUSKUSDT — HIGH: 0.515 / LOW: 0.056
-[OK] ANKRUSDT — HIGH: 0.064 / LOW: 0.01359
-[OK] WINUSDT — HIGH: 0.00021 / LOW: 0.00004183
-[OK] COSUSDT — HIGH: 0.01699 / LOW: 0.002656
-[OK] MTLUSDT — HIGH: 2.009 / LOW: 0.585
-[OK] DENTUSDT — HIGH: 0.002075 / LOW: 0.000527
-[OK] WANUSDT — HIGH: 0.3521 / LOW: 0.0811
-[OK] FUNUSDT — HIGH: 0.010217 / LOW: 0.001839
-[OK] CVCUSDT — HIGH: 0.2535 / LOW: 0.0703
-[OK] CHZUSDT — HIGH: 0.165 / LOW: 0.03439
-[OK] BANDUSDT — HIGH: 2.329 / LOW: 0.552
-[OK] XTZUSDT — HIGH: 1.909 / LOW: 0.485
-[OK] RVNUSDT — HIGH: 0.03586 / LOW: 0.00895
-[OK] HBARUSDT — HIGH: 0.40139 / LOW: 0.0416
-[OK] NKNUSDT — HIGH: 0.1447 / LOW: 0.016
-[OK] STXUSDT — HIGH: 3.0212 / LOW: 0.477
-[OK] KAVAUSDT — HIGH: 0.7478 / LOW: 0.2455
-[OK] ARPAUSDT — HIGH: 0.08471 / LOW: 0.01827
-[OK] IOTXUSDT — HIGH: 0.06735 / LOW: 0.01487
-[OK] RLCUSDT — HIGH: 3.606 / LOW: 0.956
-[OK] BCHUSDT — HIGH: 640 / LOW: 249.4
-[OK] FTTUSDT — HIGH: 4.4 / LOW: 0.7402
-[OK] EURUSDT — HIGH: 1.1567 / LOW: 1.0187
-[OK] OGNUSDT — HIGH: 0.2025 / LOW: 0.0453
-[OK] LSKUSDT — HIGH: 2.098 / LOW: 0.389
-[OK] BNTUSDT — HIGH: 0.96 / LOW: 0.3172
-[OK] LTOUSDT — HIGH: 0.24 / LOW: 0.0231
-[OK] MBLUSDT — HIGH: 0.005034 / LOW: 0.0017
-[OK] COTIUSDT — HIGH: 0.19222 / LOW: 0.04928
-[OK] STPTUSDT — HIGH: 0.15392 / LOW: 0.03008
-[OK] DATAUSDT — HIGH: 0.07462 / LOW: 0.01219
-[OK] SOLUSDT — HIGH: 295.83 / LOW: 95.26
-[OK] CTSIUSDT — HIGH: 0.2729 / LOW: 0.0435
-[OK] HIVEUSDT — HIGH: 0.6896 / LOW: 0.1467
-[OK] CHRUSDT — HIGH: 0.38 / LOW: 0.0686
-[OK] ARDRUSDT — HIGH: 0.18768 / LOW: 0.023
-[OK] MDTUSDT — HIGH: 0.085 / LOW: 0.01804
-[OK] KNCUSDT — HIGH: 0.96 / LOW: 0.2577
-[OK] LRCUSDT — HIGH: 0.3338 / LOW: 0.0756
-[OK] COMPUSDT — HIGH: 144 / LOW: 33.84
-[OK] SCUSDT — HIGH: 0.008391 / LOW: 0.002457
-[OK] ZENUSDT — HIGH: 46.28 / LOW: 5.78
-[OK] SNXUSDT — HIGH: 3.686 / LOW: 0.548
-[OK] VTHOUSDT — HIGH: 0.012 / LOW: 0.001334
-[OK] DGBUSDT — HIGH: 0.02207 / LOW: 0.005
-[OK] SXPUSDT — HIGH: 0.4824 / LOW: 0.1416
-[OK] MKRUSDT — HIGH: 3234 / LOW: 778
-[OK] DCRUSDT — HIGH: 25.41 / LOW: 8.75
-[OK] STORJUSDT — HIGH: 0.7767 / LOW: 0.2104
-[OK] MANAUSDT — HIGH: 0.8556 / LOW: 0.1904
-[OK] YFIUSDT — HIGH: 14774 / LOW: 4062
-[OK] KMDUSDT — HIGH: 0.489 / LOW: 0.1076
-[OK] JSTUSDT — HIGH: 0.08389 / LOW: 0.02395
-[OK] CRVUSDT — HIGH: 1.3368 / LOW: 0.1801
-[OK] SANDUSDT — HIGH: 1.0667 / LOW: 0.2082
-[OK] NMRUSDT — HIGH: 30.78 / LOW: 5.86
-[OK] DOTUSDT — HIGH: 11.649 / LOW: 3.25
-[OK] LUNAUSDT — HIGH: 0.83 / LOW: 0.135
-[OK] RSRUSDT — HIGH: 0.027001 / LOW: 0.003044
-[OK] PAXGUSDT — HIGH: 3523 / LOW: 2286
-[OK] TRBUSDT — HIGH: 129.3 / LOW: 19.43
-[OK] SUSHIUSDT — HIGH: 2.818 / LOW: 0.446
-[OK] KSMUSDT — HIGH: 53.5 / LOW: 11.35
-[OK] EGLDUSDT — HIGH: 58.25 / LOW: 11.77
-[OK] DIAUSDT — HIGH: 1.3377 / LOW: 0.2575
-[OK] RUNEUSDT — HIGH: 7.576 / LOW: 0.955
-[OK] FIOUSDT — HIGH: 0.0656 / LOW: 0.01061
-[OK] UMAUSDT — HIGH: 4.45 / LOW: 0.888
-[OK] BELUSDT — HIGH: 1.1942 / LOW: 0.3
-[OK] UNIUSDT — HIGH: 19.47 / LOW: 4.555
-[OK] OXTUSDT — HIGH: 0.158 / LOW: 0.0521
-[OK] SUNUSDT — HIGH: 0.04484 / LOW: 0.00803
-[OK] AVAXUSDT — HIGH: 55.79 / LOW: 14.66
-[OK] FLMUSDT — HIGH: 0.1082 / LOW: 0.0136
-[OK] UTKUSDT — HIGH: 0.17853 / LOW: 0.02453
-[OK] XVSUSDT — HIGH: 12.88 / LOW: 4.18
-[OK] ALPHAUSDT — HIGH: 0.142 / LOW: 0.0236
-[OK] AAVEUSDT — HIGH: 399.85 / LOW: 71.06
-[OK] NEARUSDT — HIGH: 8.52 / LOW: 1.821
-[OK] FILUSDT — HIGH: 8.424 / LOW: 2.112
-[OK] INJUSDT — HIGH: 35.26 / LOW: 6.34
-[OK] AUDIOUSDT — HIGH: 0.2716 / LOW: 0.0559
-[OK] CTKUSDT — HIGH: 1.73 / LOW: 0.2719
-[OK] AXSUSDT — HIGH: 10.353 / LOW: 2.098
-[OK] STRAXUSDT — HIGH: 0.099 / LOW: 0.03352
-[OK] ROSEUSDT — HIGH: 0.1426 / LOW: 0.0192
-[OK] AVAUSDT — HIGH: 3.52 / LOW: 0.4071
-[OK] SKLUSDT — HIGH: 0.0965 / LOW: 0.01634
-[OK] GRTUSDT — HIGH: 0.3584 / LOW: 0.0663
-[OK] JUVUSDT — HIGH: 3.859 / LOW: 0.857
-[OK] PSGUSDT — HIGH: 4.587 / LOW: 1.778
-[OK] 1INCHUSDT — HIGH: 0.6328 / LOW: 0.1481
-[OK] OGUSDT — HIGH: 14.326 / LOW: 2.215
-[OK] ATMUSDT — HIGH: 4.453 / LOW: 0.934
-[OK] ASRUSDT — HIGH: 4.159 / LOW: 0.952
-[OK] CELOUSDT — HIGH: 1.1287 / LOW: 0.2461
-[OK] RIFUSDT — HIGH: 0.1884 / LOW: 0.0303
-[OK] TRUUSDT — HIGH: 0.24444 / LOW: 0.0255
-[OK] CKBUSDT — HIGH: 0.020343 / LOW: 0.003407
-[OK] TWTUSDT — HIGH: 1.6288 / LOW: 0.61
-[OK] SFPUSDT — HIGH: 0.8971 / LOW: 0.4448
-[OK] DODOUSDT — HIGH: 0.2386 / LOW: 0.0388
-[OK] CAKEUSDT — HIGH: 4.515 / LOW: 1.116
-[OK] ACMUSDT — HIGH: 2.799 / LOW: 0.704
-[OK] FISUSDT — HIGH: 0.6781 / LOW: 0.0996
-[OK] OMUSDT — HIGH: 9.1733 / LOW: 0.351
-[OK] PONDUSDT — HIGH: 0.0359 / LOW: 0.00686
-[OK] DEGOUSDT — HIGH: 4.544 / LOW: 1.071
-[OK] ALICEUSDT — HIGH: 2.789 / LOW: 0.317
-[OK] PERPUSDT — HIGH: 1.32 / LOW: 0.1635
-[OK] SUPERUSDT — HIGH: 2.2768 / LOW: 0.3673
-[OK] CFXUSDT — HIGH: 0.2733 / LOW: 0.062
-[OK] TKOUSDT — HIGH: 0.7527 / LOW: 0.107
-[OK] PUNDIXUSDT — HIGH: 0.7 / LOW: 0.2135
-[OK] TLMUSDT — HIGH: 0.02463 / LOW: 0.00368
-[OK] BARUSDT — HIGH: 3.2 / LOW: 1.236
-[OK] FORTHUSDT — HIGH: 6.561 / LOW: 1.887
-[OK] BAKEUSDT — HIGH: 0.5237 / LOW: 0.0942
-[OK] SLPUSDT — HIGH: 0.006403 / LOW: 0.001216
-[OK] SHIBUSDT — HIGH: 0.00003343 / LOW: 0.00001028
-[OK] ICPUSDT — HIGH: 15.577 / LOW: 4.183
-[OK] ARUSDT — HIGH: 49.55 / LOW: 4.63
-[OK] MASKUSDT — HIGH: 4.748 / LOW: 0.927
-[OK] LPTUSDT — HIGH: 26.346 / LOW: 3.24
-[OK] XVGUSDT — HIGH: 0.021239 / LOW: 0.002552
-[OK] ATAUSDT — HIGH: 0.2547 / LOW: 0.0412
-[OK] GTCUSDT — HIGH: 1.892 / LOW: 0.203
-[OK] PHAUSDT — HIGH: 0.604 / LOW: 0.075
-[OK] MLNUSDT — HIGH: 30.14 / LOW: 7.43
-[OK] DEXEUSDT — HIGH: 24.199 / LOW: 6.074
-[OK] C98USDT — HIGH: 0.2843 / LOW: 0.0443
-[OK] QNTUSDT — HIGH: 171.7 / LOW: 50
-[OK] FLOWUSDT — HIGH: 1.271 / LOW: 0.302
-[OK] MINAUSDT — HIGH: 1.0499 / LOW: 0.182
-[OK] RAYUSDT — HIGH: 8.7 / LOW: 1.232
-[OK] FARMUSDT — HIGH: 84.99 / LOW: 23.8
-[OK] QUICKUSDT — HIGH: 0.06949 / LOW: 0.01951
-[OK] MBOXUSDT — HIGH: 0.4122 / LOW: 0.0364
-[OK] REQUSDT — HIGH: 0.1772 / LOW: 0.0749
-[OK] GHSTUSDT — HIGH: 2.24 / LOW: 0.349
-[OK] WAXPUSDT — HIGH: 0.076 / LOW: 0.01658
-[OK] GNOUSDT — HIGH: 375.4 / LOW: 90.8
-[OK] XECUSDT — HIGH: 0.0000595 / LOW: 0.00001584
-[OK] DYDXUSDT — HIGH: 2.7294 / LOW: 0.4947
-[OK] IDEXUSDT — HIGH: 0.1155 / LOW: 0.0178
-[OK] USDPUSDT — HIGH: 1.2134 / LOW: 0.9933
-[OK] GALAUSDT — HIGH: 0.06658 / LOW: 0.01175
-[OK] ILVUSDT — HIGH: 101.85 / LOW: 9.88
-[OK] YGGUSDT — HIGH: 1.165 / LOW: 0.135
-[OK] SYSUSDT — HIGH: 0.2176 / LOW: 0.0287
-[OK] DFUSDT — HIGH: 0.13286 / LOW: 0.02204
-[OK] FIDAUSDT — HIGH: 0.4801 / LOW: 0.0559
-[OK] AGLDUSDT — HIGH: 3.2 / LOW: 0.579
-[OK] RADUSDT — HIGH: 2.09 / LOW: 0.606
-[OK] RAREUSDT — HIGH: 0.3476 / LOW: 0.0462
-[OK] LAZIOUSDT — HIGH: 3.1 / LOW: 0.814
-[OK] CHESSUSDT — HIGH: 0.2789 / LOW: 0.0442
-[OK] ADXUSDT — HIGH: 0.311 / LOW: 0.072
-[OK] AUCTIONUSDT — HIGH: 68.31 / LOW: 7.01
-[OK] MOVRUSDT — HIGH: 20.75 / LOW: 4.223
-[OK] CITYUSDT — HIGH: 3.787 / LOW: 0.901
-[OK] ENSUSDT — HIGH: 50.55 / LOW: 11.9
-[OK] QIUSDT — HIGH: 0.02842 / LOW: 0.00652
-[OK] PORTOUSDT — HIGH: 3.359 / LOW: 0.803
-[OK] POWRUSDT — HIGH: 0.42 / LOW: 0.1246
-[OK] JASMYUSDT — HIGH: 0.05913 / LOW: 0.00822
-[OK] AMPUSDT — HIGH: 0.0145 / LOW: 0.002754
-[OK] PYRUSDT — HIGH: 7 / LOW: 0.874
-[OK] ALCXUSDT — HIGH: 34.3 / LOW: 7.01
-[OK] SANTOSUSDT — HIGH: 8.32 / LOW: 2.038
-[OK] BICOUSDT — HIGH: 0.6899 / LOW: 0.078
-[OK] FLUXUSDT — HIGH: 1.0841 / LOW: 0.1783
-[OK] FXSUSDT — HIGH: 5.232 / LOW: 0.351
-[OK] VOXELUSDT — HIGH: 0.3096 / LOW: 0.0201
-[OK] HIGHUSDT — HIGH: 9.768 / LOW: 0.339
-[OK] CVXUSDT — HIGH: 8.152 / LOW: 1.42
-[OK] PEOPLEUSDT — HIGH: 0.144 / LOW: 0.00973
-[OK] SPELLUSDT — HIGH: 0.0020884 / LOW: 0.000379
-[OK] JOEUSDT — HIGH: 0.6529 / LOW: 0.1278
-[OK] ACHUSDT — HIGH: 0.05859 / LOW: 0.0143
-[OK] IMXUSDT — HIGH: 2.6127 / LOW: 0.349
-[OK] GLMRUSDT — HIGH: 0.4304 / LOW: 0.0535
-[OK] LOKAUSDT — HIGH: 0.3457 / LOW: 0.0516
-[OK] SCRTUSDT — HIGH: 0.828 / LOW: 0.1455
-[OK] API3USDT — HIGH: 3.691 / LOW: 0.492
-[OK] BTTCUSDT — HIGH: 0.00000192 / LOW: 5.5e-7
-[OK] ACAUSDT — HIGH: 0.1499 / LOW: 0.0269
-[OK] XNOUSDT — HIGH: 2.489 / LOW: 0.667
-[OK] WOOUSDT — HIGH: 0.3844 / LOW: 0.054
-[OK] ALPINEUSDT — HIGH: 2.08 / LOW: 0.633
-[OK] TUSDT — HIGH: 0.04317 / LOW: 0.01167
-[OK] ASTRUSDT — HIGH: 0.1033 / LOW: 0.02086
-[OK] GMTUSDT — HIGH: 0.2639 / LOW: 0.0364
-[OK] KDAUSDT — HIGH: 1.9869 / LOW: 0.3214
-[OK] APEUSDT — HIGH: 2.168 / LOW: 0.3484
-[OK] BSWUSDT — HIGH: 0.1149 / LOW: 0.011
-[OK] BIFIUSDT — HIGH: 441.8 / LOW: 131.1
-[OK] STEEMUSDT — HIGH: 0.3818 / LOW: 0.1007
-[OK] NEXOUSDT — HIGH: 1.58 / LOW: 0.808
-[OK] REIUSDT — HIGH: 0.095 / LOW: 0.01664
-[OK] LDOUSDT — HIGH: 2.723 / LOW: 0.611
-[OK] OPUSDT — HIGH: 3.028 / LOW: 0.545
-[OK] LEVERUSDT — HIGH: 0.004381 / LOW: 0.000379
-[OK] STGUSDT — HIGH: 0.8687 / LOW: 0.0525
-[OK] LUNCUSDT — HIGH: 0.0001798 / LOW: 0.00004665
-[OK] GMXUSDT — HIGH: 47 / LOW: 9.58
-[OK] POLYXUSDT — HIGH: 0.532 / LOW: 0.1055
-[OK] APTUSDT — HIGH: 15.33 / LOW: 3.893
-[OK] OSMOUSDT — HIGH: 1.0527 / LOW: 0.1963
-[OK] HFTUSDT — HIGH: 0.3241 / LOW: 0.0457
-[OK] PHBUSDT — HIGH: 3.186 / LOW: 0.326
-[OK] HOOKUSDT — HIGH: 1.0287 / LOW: 0.0867
-[OK] MAGICUSDT — HIGH: 1.0112 / LOW: 0.0641
-[OK] HIFIUSDT — HIGH: 0.9149 / LOW: 0.1123
-[OK] RPLUSDT — HIGH: 36 / LOW: 3.14
-[OK] GNSUSDT — HIGH: 4.605 / LOW: 1.031
-[OK] SYNUSDT — HIGH: 1.0445 / LOW: 0.1188
-[OK] SSVUSDT — HIGH: 51.64 / LOW: 4.26
-[OK] LQTYUSDT — HIGH: 2.88 / LOW: 0.431
-[OK] USTCUSDT — HIGH: 0.03191 / LOW: 0.00849
-[OK] GASUSDT — HIGH: 7.748 / LOW: 1.752
-[OK] GLMUSDT — HIGH: 0.6718 / LOW: 0.2026
-[OK] PROMUSDT — HIGH: 13.3 / LOW: 3.285
-[OK] QKCUSDT — HIGH: 0.017387 / LOW: 0.005138
-[OK] IDUSDT — HIGH: 0.816 / LOW: 0.1489
-[OK] ARBUSDT — HIGH: 1.2754 / LOW: 0.242
-[OK] RDNTUSDT — HIGH: 0.2256 / LOW: 0.01572
-[OK] WBTCUSDT — HIGH: 109295.92 / LOW: 5209
-[OK] EDUUSDT — HIGH: 1.205 / LOW: 0.0934
-[OK] SUIUSDT — HIGH: 5.3687 / LOW: 0.4625
-[OK] PEPEUSDT — HIGH: 0.00002836 / LOW: 0.00000525
-[OK] FLOKIUSDT — HIGH: 0.000349 / LOW: 0.00004545
-[OK] MAVUSDT — HIGH: 0.5038 / LOW: 0.04448
-[OK] PENDLEUSDT — HIGH: 7.25 / LOW: 1.813
-[OK] ARKMUSDT — HIGH: 2.817 / LOW: 0.391
-[OK] WBETHUSDT — HIGH: 4340 / LOW: 1470.88
-[OK] WLDUSDT — HIGH: 5.675 / LOW: 0.573
-[OK] FDUSDUSDT — HIGH: 1.2026 / LOW: 0.8726
-[OK] SEIUSDT — HIGH: 0.7357 / LOW: 0.1303
-[OK] CYBERUSDT — HIGH: 9.79 / LOW: 0.882
-[OK] ARKUSDT — HIGH: 0.9214 / LOW: 0.2
-[OK] IQUSDT — HIGH: 0.013229 / LOW: 0.003224
-[OK] NTRNUSDT — HIGH: 0.844 / LOW: 0.1004
-[OK] TIAUSDT — HIGH: 11.96 / LOW: 2.146
-[OK] MEMEUSDT — HIGH: 0.0336 / LOW: 0.001376
-[OK] ORDIUSDT — HIGH: 65.63 / LOW: 5.61
-[OK] BEAMXUSDT — HIGH: 0.04109 / LOW: 0.00484
-[OK] PIVXUSDT — HIGH: 0.492 / LOW: 0.1037
-[OK] VICUSDT — HIGH: 0.5742 / LOW: 0.1654
-[OK] BLURUSDT — HIGH: 0.489 / LOW: 0.0807
-[OK] VANRYUSDT — HIGH: 0.248 / LOW: 0.0201
-[OK] AEURUSDT — HIGH: 1.1278 / LOW: 0.756
-[OK] JTOUSDT — HIGH: 4.943 / LOW: 1.407
-[OK] 1000SATSUSDT — HIGH: 0.0004278 / LOW: 0.0000325
-[OK] BONKUSDT — HIGH: 0.0000623 / LOW: 0.00000886
-[OK] ACEUSDT — HIGH: 6.783 / LOW: 0.425
-[OK] NFPUSDT — HIGH: 0.6055 / LOW: 0.0475
-[OK] AIUSDT — HIGH: 1.284 / LOW: 0.1044
-[OK] XAIUSDT — HIGH: 0.9669 / LOW: 0.0384
-[OK] MANTAUSDT — HIGH: 1.892 / LOW: 0.158
-[OK] ALTUSDT — HIGH: 0.3879 / LOW: 0.02214
-[OK] JUPUSDT — HIGH: 1.44 / LOW: 0.3018
-[OK] PYTHUSDT — HIGH: 0.5533 / LOW: 0.1042
-[OK] RONINUSDT — HIGH: 3.349 / LOW: 0.461
-[OK] DYMUSDT — HIGH: 3.453 / LOW: 0.214
-[OK] PIXELUSDT — HIGH: 0.5579 / LOW: 0.01852
-[OK] STRKUSDT — HIGH: 1.399 / LOW: 0.1086
-[OK] PORTALUSDT — HIGH: 1.2624 / LOW: 0.0556
-[OK] AXLUSDT — HIGH: 1.14 / LOW: 0.2702
-[OK] WIFUSDT — HIGH: 4.8298 / LOW: 0.304
-[OK] METISUSDT — HIGH: 84.71 / LOW: 11.64
-[OK] AEVOUSDT — HIGH: 1.127 / LOW: 0.0756
-[OK] BOMEUSDT — HIGH: 0.015972 / LOW: 0.00089
-[OK] ETHFIUSDT — HIGH: 5.4 / LOW: 0.399
-[OK] ENAUSDT — HIGH: 1.33 / LOW: 0.194
-[OK] WUSDT — HIGH: 0.764 / LOW: 0.0646
-[OK] TNSRUSDT — HIGH: 1.496 / LOW: 0.1079
-[OK] SAGAUSDT — HIGH: 3.4489 / LOW: 0.1835
-[OK] TAOUSDT — HIGH: 748.3 / LOW: 163.7
-[OK] OMNIUSDT — HIGH: 22.83 / LOW: 1.7
-[OK] REZUSDT — HIGH: 0.1869 / LOW: 0.01072
-[OK] BBUSDT — HIGH: 0.8789 / LOW: 0.0816
-[OK] NOTUSDT — HIGH: 0.037 / LOW: 0.000779
-[OK] IOUSDT — HIGH: 6.5 / LOW: 0.06
-[OK] ZKUSDT — HIGH: 0.295 / LOW: 0.0396
-[OK] LISTAUSDT — HIGH: 0.8571 / LOW: 0.02
-[OK] ZROUSDT — HIGH: 7.567 / LOW: 1
-[OK] GUSDT — HIGH: 0.08 / LOW: 0.01153
-[OK] BANANAUSDT — HIGH: 78.68 / LOW: 10.2
-[OK] RENDERUSDT — HIGH: 11.9 / LOW: 2.504
-[OK] TONUSDT — HIGH: 7.269 / LOW: 2.354
-[OK] DOGSUSDT — HIGH: 0.0018 / LOW: 0.0001006
-[OK] EURIUSDT — HIGH: 1.2005 / LOW: 1.0189
-[OK] SLFUSDT — HIGH: 0.88 / LOW: 0.1444
-[OK] POLUSDT — HIGH: 1 / LOW: 0.1519
-[OK] NEIROUSDT — HIGH: 0.00311729 / LOW: 0.00003118
-[OK] TURBOUSDT — HIGH: 0.014478 / LOW: 0.00136
-[OK] 1MBABYDOGEUSDT — HIGH: 0.0067042 / LOW: 0.0008704
-[OK] CATIUSDT — HIGH: 1.2 / LOW: 0.0715
-[OK] HMSTRUSDT — HIGH: 0.014149 / LOW: 0.001
-[OK] EIGENUSDT — HIGH: 5.659 / LOW: 0.3
-[OK] SCRUSDT — HIGH: 1.94 / LOW: 0.207
-[OK] BNSOLUSDT — HIGH: 302.5 / LOW: 99.3
-[OK] LUMIAUSDT — HIGH: 4.06 / LOW: 0.223
-[OK] KAIAUSDT — HIGH: 0.425 / LOW: 0.08
-[OK] COWUSDT — HIGH: 1.23 / LOW: 0.1916
-[OK] CETUSUSDT — HIGH: 0.4972 / LOW: 0.0763
-[OK] PNUTUSDT — HIGH: 2.5 / LOW: 0.1047
-[OK] ACTUSDT — HIGH: 0.95 / LOW: 0.0196
-[OK] USUALUSDT — HIGH: 1.6521 / LOW: 0.0125
-[OK] THEUSDT — HIGH: 4.1855 / LOW: 0.1682
-[OK] ACXUSDT — HIGH: 1.86 / LOW: 0.1677
-[OK] ORCAUSDT — HIGH: 12.8 / LOW: 1.358
-[OK] MOVEUSDT — HIGH: 1.41 / LOW: 0.02
-[OK] MEUSDT — HIGH: 8 / LOW: 0.3
-[OK] VELODROMEUSDT — HIGH: 0.388 / LOW: 0.0356
-[OK] VANAUSDT — HIGH: 35.8 / LOW: 1
-[OK] 1000CATUSDT — HIGH: 0.07089 / LOW: 0.00416
-[OK] PENGUUSDT — HIGH: 0.07 / LOW: 0.003375
-[OK] BIOUSDT — HIGH: 1.477 / LOW: 0.03
-[OK] DUSDT — HIGH: 0.21707 / LOW: 0.03525
-[OK] AIXBTUSDT — HIGH: 0.99 / LOW: 0.0658
-[OK] CGPTUSDT — HIGH: 0.473 / LOW: 0.0541
-[OK] COOKIEUSDT — HIGH: 0.6999 / LOW: 0.0703
-[OK] SUSDT — HIGH: 0.99 / LOW: 0.3154
-[OK] SOLVUSDT — HIGH: 0.197 / LOW: 0.02163
-[OK] TRUMPUSDT — HIGH: 77.24 / LOW: 7.14
-[OK] ANIMEUSDT — HIGH: 0.107 / LOW: 0.01216
-[OK] BERAUSDT — HIGH: 15.5 / LOW: 1
-[OK] 1000CHEEMSUSDT — HIGH: 0.002183 / LOW: 0.000666
-[OK] TSTUSDT — HIGH: 0.528 / LOW: 0.05
-[OK] LAYERUSDT — HIGH: 3.4303 / LOW: 0.2
-[OK] HEIUSDT — HIGH: 1.49 / LOW: 0.2281
-[OK] KAITOUSDT — HIGH: 2.9274 / LOW: 0.1
-[OK] SHELLUSDT — HIGH: 0.7099 / LOW: 0.1077
-[OK] REDUSDT — HIGH: 1.4609 / LOW: 0.2
-[OK] GPSUSDT — HIGH: 0.151 / LOW: 0.0151
-[OK] EPICUSDT — HIGH: 2.26 / LOW: 1.115
-[OK] BMTUSDT — HIGH: 0.3298 / LOW: 0.0721
-[OK] FORMUSDT — HIGH: 2.9766 / LOW: 1.27
-[OK] XUSDUSDT — HIGH: 1.0095 / LOW: 0.9952
-[OK] NILUSDT — HIGH: 0.977 / LOW: 0.325
-[OK] PARTIUSDT — HIGH: 0.4382 / LOW: 0.025
-[OK] MUBARAKUSDT — HIGH: 0.2 / LOW: 0.0208
-[OK] TUTUSDT — HIGH: 0.058 / LOW: 0.01261
-[OK] BROCCOLI714USDT — HIGH: 0.088 / LOW: 0.02209
-[OK] BANANAS31USDT — HIGH: 0.01 / LOW: 0.00431
-[OK] GUNUSDT — HIGH: 0.15 / LOW: 0.03
-[OK] BABYUSDT — HIGH: 0.18175 / LOW: 0.03
-[OK] ONDOUSDT — HIGH: 1.1104 / LOW: 0.7056
-[OK] BIGTIMEUSDT — HIGH: 0.0919 / LOW: 0.05873
-[OK] VIRTUALUSDT — HIGH: 2.2213 / LOW: 0.4199
-[OK] KERNELUSDT — HIGH: 0.899 / LOW: 0.1
-[OK] WCTUSDT — HIGH: 0.6537 / LOW: 0.2
-[OK] HYPERUSDT — HIGH: 0.3666 / LOW: 0.09
-[OK] INITUSDT — HIGH: 1.3796 / LOW: 0.2
-[OK] SIGNUSDT — HIGH: 0.1331 / LOW: 0.03
-[OK] STOUSDT — HIGH: 0.22 / LOW: 0.0956
-[OK] SYRUPUSDT — HIGH: 1 / LOW: 0.1432
-[OK] KMNOUSDT — HIGH: 0.095 / LOW: 0.06384
-[OK] SXTUSDT — HIGH: 0.1988 / LOW: 0.06
+{
+  "BTCUSDT": {
+    "high": 109588.0,
+    "low": 49000.0
+  },
+  "ETHUSDT": {
+    "high": 4107.8,
+    "low": 1385.05
+  },
+  "BNBUSDT": {
+    "high": 793.86,
+    "low": 400.0
+  },
+  "NEOUSDT": {
+    "high": 26.21,
+    "low": 4.31
+  },
+  "LTCUSDT": {
+    "high": 147.06,
+    "low": 49.8
+  },
+  "QTUMUSDT": {
+    "high": 5.742,
+    "low": 1.571
+  },
+  "ADAUSDT": {
+    "high": 1.3264,
+    "low": 0.2756
+  },
+  "XRPUSDT": {
+    "high": 3.4,
+    "low": 0.3823
+  },
+  "EOSUSDT": {
+    "high": 1.5406,
+    "low": 0.4
+  },
+  "TUSDUSDT": {
+    "high": 1.22,
+    "low": 0.9902
+  },
+  "IOTAUSDT": {
+    "high": 0.6328,
+    "low": 0.1008
+  },
+  "XLMUSDT": {
+    "high": 0.6374,
+    "low": 0.0757
+  },
+  "ONTUSDT": {
+    "high": 0.3967,
+    "low": 0.1099
+  },
+  "TRXUSDT": {
+    "high": 0.45,
+    "low": 0.11032
+  },
+  "ETCUSDT": {
+    "high": 39.97,
+    "low": 12.7
+  },
+  "ICXUSDT": {
+    "high": 0.2949,
+    "low": 0.0002
+  },
+  "VETUSDT": {
+    "high": 0.08,
+    "low": 0.01771
+  },
+  "USDCUSDT": {
+    "high": 1.0051,
+    "low": 0.9971
+  },
+  "LINKUSDT": {
+    "high": 30.94,
+    "low": 8.08
+  },
+  "ONGUSDT": {
+    "high": 0.5518,
+    "low": 0.144
+  },
+  "HOTUSDT": {
+    "high": 0.004085,
+    "low": 0.000795
+  },
+  "ZILUSDT": {
+    "high": 0.03771,
+    "low": 0.00919
+  },
+  "ZRXUSDT": {
+    "high": 0.912,
+    "low": 0.1925
+  },
+  "FETUSDT": {
+    "high": 2.71,
+    "low": 0.345
+  },
+  "BATUSDT": {
+    "high": 0.3734,
+    "low": 0.1078
+  },
+  "ZECUSDT": {
+    "high": 79.33,
+    "low": 15.78
+  },
+  "IOSTUSDT": {
+    "high": 0.012162,
+    "low": 0.002833
+  },
+  "CELRUSDT": {
+    "high": 0.03244,
+    "low": 0.00664
+  },
+  "DASHUSDT": {
+    "high": 71.64,
+    "low": 17.81
+  },
+  "THETAUSDT": {
+    "high": 3.351,
+    "low": 0.603
+  },
+  "ENJUSDT": {
+    "high": 0.3978,
+    "low": 0.0591
+  },
+  "ATOMUSDT": {
+    "high": 10.678,
+    "low": 3.386
+  },
+  "TFUELUSDT": {
+    "high": 0.1176,
+    "low": 0.02779
+  },
+  "ONEUSDT": {
+    "high": 0.04852,
+    "low": 0.00839
+  },
+  "ALGOUSDT": {
+    "high": 0.6139,
+    "low": 0.0938
+  },
+  "DOGEUSDT": {
+    "high": 0.48434,
+    "low": 0.0805
+  },
+  "DUSKUSDT": {
+    "high": 0.515,
+    "low": 0.056
+  },
+  "ANKRUSDT": {
+    "high": 0.064,
+    "low": 0.01359
+  },
+  "WINUSDT": {
+    "high": 0.00021,
+    "low": 4.183e-05
+  },
+  "COSUSDT": {
+    "high": 0.01699,
+    "low": 0.002656
+  },
+  "MTLUSDT": {
+    "high": 2.009,
+    "low": 0.585
+  },
+  "DENTUSDT": {
+    "high": 0.002075,
+    "low": 0.000527
+  },
+  "WANUSDT": {
+    "high": 0.3521,
+    "low": 0.0811
+  },
+  "FUNUSDT": {
+    "high": 0.010217,
+    "low": 0.001839
+  },
+  "CVCUSDT": {
+    "high": 0.2535,
+    "low": 0.0703
+  },
+  "CHZUSDT": {
+    "high": 0.165,
+    "low": 0.03439
+  },
+  "BANDUSDT": {
+    "high": 2.329,
+    "low": 0.552
+  },
+  "XTZUSDT": {
+    "high": 1.909,
+    "low": 0.485
+  },
+  "RVNUSDT": {
+    "high": 0.03586,
+    "low": 0.00895
+  },
+  "HBARUSDT": {
+    "high": 0.40139,
+    "low": 0.0416
+  },
+  "NKNUSDT": {
+    "high": 0.1447,
+    "low": 0.016
+  },
+  "STXUSDT": {
+    "high": 3.0212,
+    "low": 0.477
+  },
+  "KAVAUSDT": {
+    "high": 0.7478,
+    "low": 0.2455
+  },
+  "ARPAUSDT": {
+    "high": 0.08471,
+    "low": 0.01827
+  },
+  "IOTXUSDT": {
+    "high": 0.06735,
+    "low": 0.01487
+  },
+  "RLCUSDT": {
+    "high": 3.606,
+    "low": 0.956
+  },
+  "BCHUSDT": {
+    "high": 640.0,
+    "low": 249.4
+  },
+  "FTTUSDT": {
+    "high": 4.4,
+    "low": 0.7402
+  },
+  "EURUSDT": {
+    "high": 1.1567,
+    "low": 1.0187
+  },
+  "OGNUSDT": {
+    "high": 0.2025,
+    "low": 0.0453
+  },
+  "LSKUSDT": {
+    "high": 2.098,
+    "low": 0.389
+  },
+  "BNTUSDT": {
+    "high": 0.96,
+    "low": 0.3172
+  },
+  "LTOUSDT": {
+    "high": 0.24,
+    "low": 0.0231
+  },
+  "MBLUSDT": {
+    "high": 0.005034,
+    "low": 0.0017
+  },
+  "COTIUSDT": {
+    "high": 0.19222,
+    "low": 0.04928
+  },
+  "STPTUSDT": {
+    "high": 0.15392,
+    "low": 0.03008
+  },
+  "DATAUSDT": {
+    "high": 0.07462,
+    "low": 0.01219
+  },
+  "SOLUSDT": {
+    "high": 295.83,
+    "low": 95.26
+  },
+  "CTSIUSDT": {
+    "high": 0.2729,
+    "low": 0.0435
+  },
+  "HIVEUSDT": {
+    "high": 0.6896,
+    "low": 0.1467
+  },
+  "CHRUSDT": {
+    "high": 0.38,
+    "low": 0.0686
+  },
+  "ARDRUSDT": {
+    "high": 0.18768,
+    "low": 0.023
+  },
+  "MDTUSDT": {
+    "high": 0.085,
+    "low": 0.01804
+  },
+  "KNCUSDT": {
+    "high": 0.96,
+    "low": 0.2577
+  },
+  "LRCUSDT": {
+    "high": 0.3338,
+    "low": 0.0756
+  },
+  "COMPUSDT": {
+    "high": 144.0,
+    "low": 33.84
+  },
+  "SCUSDT": {
+    "high": 0.008391,
+    "low": 0.002457
+  },
+  "ZENUSDT": {
+    "high": 46.28,
+    "low": 5.78
+  },
+  "SNXUSDT": {
+    "high": 3.686,
+    "low": 0.548
+  },
+  "VTHOUSDT": {
+    "high": 0.012,
+    "low": 0.001334
+  },
+  "DGBUSDT": {
+    "high": 0.02207,
+    "low": 0.005
+  },
+  "SXPUSDT": {
+    "high": 0.4824,
+    "low": 0.1416
+  },
+  "MKRUSDT": {
+    "high": 3234.0,
+    "low": 778.0
+  },
+  "DCRUSDT": {
+    "high": 25.41,
+    "low": 8.75
+  },
+  "STORJUSDT": {
+    "high": 0.7767,
+    "low": 0.2104
+  },
+  "MANAUSDT": {
+    "high": 0.8556,
+    "low": 0.1904
+  },
+  "YFIUSDT": {
+    "high": 14774.0,
+    "low": 4062.0
+  },
+  "KMDUSDT": {
+    "high": 0.489,
+    "low": 0.1076
+  },
+  "JSTUSDT": {
+    "high": 0.08389,
+    "low": 0.02395
+  },
+  "CRVUSDT": {
+    "high": 1.3368,
+    "low": 0.1801
+  },
+  "SANDUSDT": {
+    "high": 1.0667,
+    "low": 0.2082
+  },
+  "NMRUSDT": {
+    "high": 30.78,
+    "low": 5.86
+  },
+  "DOTUSDT": {
+    "high": 11.649,
+    "low": 3.25
+  },
+  "LUNAUSDT": {
+    "high": 0.83,
+    "low": 0.135
+  },
+  "RSRUSDT": {
+    "high": 0.027001,
+    "low": 0.003044
+  },
+  "PAXGUSDT": {
+    "high": 3523.0,
+    "low": 2286.0
+  },
+  "TRBUSDT": {
+    "high": 129.3,
+    "low": 19.43
+  },
+  "SUSHIUSDT": {
+    "high": 2.818,
+    "low": 0.446
+  },
+  "KSMUSDT": {
+    "high": 53.5,
+    "low": 11.35
+  },
+  "EGLDUSDT": {
+    "high": 58.25,
+    "low": 11.77
+  },
+  "DIAUSDT": {
+    "high": 1.3377,
+    "low": 0.2575
+  },
+  "RUNEUSDT": {
+    "high": 7.576,
+    "low": 0.955
+  },
+  "FIOUSDT": {
+    "high": 0.0656,
+    "low": 0.01061
+  },
+  "UMAUSDT": {
+    "high": 4.45,
+    "low": 0.888
+  },
+  "BELUSDT": {
+    "high": 1.1942,
+    "low": 0.3
+  },
+  "UNIUSDT": {
+    "high": 19.47,
+    "low": 4.555
+  },
+  "OXTUSDT": {
+    "high": 0.158,
+    "low": 0.0521
+  },
+  "SUNUSDT": {
+    "high": 0.04484,
+    "low": 0.00803
+  },
+  "AVAXUSDT": {
+    "high": 55.79,
+    "low": 14.66
+  },
+  "FLMUSDT": {
+    "high": 0.1082,
+    "low": 0.0136
+  },
+  "UTKUSDT": {
+    "high": 0.17853,
+    "low": 0.02453
+  },
+  "XVSUSDT": {
+    "high": 12.88,
+    "low": 4.18
+  },
+  "ALPHAUSDT": {
+    "high": 0.142,
+    "low": 0.0236
+  },
+  "AAVEUSDT": {
+    "high": 399.85,
+    "low": 71.06
+  },
+  "NEARUSDT": {
+    "high": 8.52,
+    "low": 1.821
+  },
+  "FILUSDT": {
+    "high": 8.424,
+    "low": 2.112
+  },
+  "INJUSDT": {
+    "high": 35.26,
+    "low": 6.34
+  },
+  "AUDIOUSDT": {
+    "high": 0.2716,
+    "low": 0.0559
+  },
+  "CTKUSDT": {
+    "high": 1.73,
+    "low": 0.2719
+  },
+  "AXSUSDT": {
+    "high": 10.353,
+    "low": 2.098
+  },
+  "STRAXUSDT": {
+    "high": 0.099,
+    "low": 0.03352
+  },
+  "ROSEUSDT": {
+    "high": 0.1426,
+    "low": 0.0192
+  },
+  "AVAUSDT": {
+    "high": 3.52,
+    "low": 0.4071
+  },
+  "SKLUSDT": {
+    "high": 0.0965,
+    "low": 0.01634
+  },
+  "GRTUSDT": {
+    "high": 0.3584,
+    "low": 0.0663
+  },
+  "JUVUSDT": {
+    "high": 3.859,
+    "low": 0.857
+  },
+  "PSGUSDT": {
+    "high": 4.587,
+    "low": 1.778
+  },
+  "1INCHUSDT": {
+    "high": 0.6328,
+    "low": 0.1481
+  },
+  "OGUSDT": {
+    "high": 14.326,
+    "low": 2.215
+  },
+  "ATMUSDT": {
+    "high": 4.453,
+    "low": 0.934
+  },
+  "ASRUSDT": {
+    "high": 4.159,
+    "low": 0.952
+  },
+  "CELOUSDT": {
+    "high": 1.1287,
+    "low": 0.2461
+  },
+  "RIFUSDT": {
+    "high": 0.1884,
+    "low": 0.0303
+  },
+  "TRUUSDT": {
+    "high": 0.24444,
+    "low": 0.0255
+  },
+  "CKBUSDT": {
+    "high": 0.020343,
+    "low": 0.003407
+  },
+  "TWTUSDT": {
+    "high": 1.6288,
+    "low": 0.61
+  },
+  "SFPUSDT": {
+    "high": 0.8971,
+    "low": 0.4448
+  },
+  "DODOUSDT": {
+    "high": 0.2386,
+    "low": 0.0388
+  },
+  "CAKEUSDT": {
+    "high": 4.515,
+    "low": 1.116
+  },
+  "ACMUSDT": {
+    "high": 2.799,
+    "low": 0.704
+  },
+  "FISUSDT": {
+    "high": 0.6781,
+    "low": 0.0996
+  },
+  "OMUSDT": {
+    "high": 9.1733,
+    "low": 0.351
+  },
+  "PONDUSDT": {
+    "high": 0.0359,
+    "low": 0.00686
+  },
+  "DEGOUSDT": {
+    "high": 4.544,
+    "low": 1.071
+  },
+  "ALICEUSDT": {
+    "high": 2.789,
+    "low": 0.317
+  },
+  "PERPUSDT": {
+    "high": 1.32,
+    "low": 0.1635
+  },
+  "SUPERUSDT": {
+    "high": 2.2768,
+    "low": 0.3673
+  },
+  "CFXUSDT": {
+    "high": 0.2733,
+    "low": 0.062
+  },
+  "TKOUSDT": {
+    "high": 0.7527,
+    "low": 0.107
+  },
+  "PUNDIXUSDT": {
+    "high": 0.7,
+    "low": 0.2135
+  },
+  "TLMUSDT": {
+    "high": 0.02463,
+    "low": 0.00368
+  },
+  "BARUSDT": {
+    "high": 3.2,
+    "low": 1.236
+  },
+  "FORTHUSDT": {
+    "high": 6.561,
+    "low": 1.887
+  },
+  "BAKEUSDT": {
+    "high": 0.5237,
+    "low": 0.0942
+  },
+  "SLPUSDT": {
+    "high": 0.006403,
+    "low": 0.001216
+  },
+  "SHIBUSDT": {
+    "high": 3.343e-05,
+    "low": 1.028e-05
+  },
+  "ICPUSDT": {
+    "high": 15.577,
+    "low": 4.183
+  },
+  "ARUSDT": {
+    "high": 49.55,
+    "low": 4.63
+  },
+  "MASKUSDT": {
+    "high": 4.748,
+    "low": 0.927
+  },
+  "LPTUSDT": {
+    "high": 26.346,
+    "low": 3.24
+  },
+  "XVGUSDT": {
+    "high": 0.021239,
+    "low": 0.002552
+  },
+  "ATAUSDT": {
+    "high": 0.2547,
+    "low": 0.0412
+  },
+  "GTCUSDT": {
+    "high": 1.892,
+    "low": 0.203
+  },
+  "PHAUSDT": {
+    "high": 0.604,
+    "low": 0.075
+  },
+  "MLNUSDT": {
+    "high": 30.14,
+    "low": 7.43
+  },
+  "DEXEUSDT": {
+    "high": 24.199,
+    "low": 6.074
+  },
+  "C98USDT": {
+    "high": 0.2843,
+    "low": 0.0443
+  },
+  "QNTUSDT": {
+    "high": 171.7,
+    "low": 50.0
+  },
+  "FLOWUSDT": {
+    "high": 1.271,
+    "low": 0.302
+  },
+  "MINAUSDT": {
+    "high": 1.0499,
+    "low": 0.182
+  },
+  "RAYUSDT": {
+    "high": 8.7,
+    "low": 1.232
+  },
+  "FARMUSDT": {
+    "high": 84.99,
+    "low": 23.8
+  },
+  "QUICKUSDT": {
+    "high": 0.06949,
+    "low": 0.01951
+  },
+  "MBOXUSDT": {
+    "high": 0.4122,
+    "low": 0.0364
+  },
+  "REQUSDT": {
+    "high": 0.1772,
+    "low": 0.0749
+  },
+  "GHSTUSDT": {
+    "high": 2.24,
+    "low": 0.349
+  },
+  "WAXPUSDT": {
+    "high": 0.076,
+    "low": 0.01658
+  },
+  "GNOUSDT": {
+    "high": 375.4,
+    "low": 90.8
+  },
+  "XECUSDT": {
+    "high": 5.95e-05,
+    "low": 1.584e-05
+  },
+  "DYDXUSDT": {
+    "high": 2.7294,
+    "low": 0.4947
+  },
+  "IDEXUSDT": {
+    "high": 0.1155,
+    "low": 0.0178
+  },
+  "USDPUSDT": {
+    "high": 1.2134,
+    "low": 0.9933
+  },
+  "GALAUSDT": {
+    "high": 0.06658,
+    "low": 0.01175
+  },
+  "ILVUSDT": {
+    "high": 101.85,
+    "low": 9.88
+  },
+  "YGGUSDT": {
+    "high": 1.165,
+    "low": 0.135
+  },
+  "SYSUSDT": {
+    "high": 0.2176,
+    "low": 0.0287
+  },
+  "DFUSDT": {
+    "high": 0.13286,
+    "low": 0.02204
+  },
+  "FIDAUSDT": {
+    "high": 0.4801,
+    "low": 0.0559
+  },
+  "AGLDUSDT": {
+    "high": 3.2,
+    "low": 0.579
+  },
+  "RADUSDT": {
+    "high": 2.09,
+    "low": 0.606
+  },
+  "RAREUSDT": {
+    "high": 0.3476,
+    "low": 0.0462
+  },
+  "LAZIOUSDT": {
+    "high": 3.1,
+    "low": 0.814
+  },
+  "CHESSUSDT": {
+    "high": 0.2789,
+    "low": 0.0442
+  },
+  "ADXUSDT": {
+    "high": 0.311,
+    "low": 0.072
+  },
+  "AUCTIONUSDT": {
+    "high": 68.31,
+    "low": 7.01
+  },
+  "MOVRUSDT": {
+    "high": 20.75,
+    "low": 4.223
+  },
+  "CITYUSDT": {
+    "high": 3.787,
+    "low": 0.901
+  },
+  "ENSUSDT": {
+    "high": 50.55,
+    "low": 11.9
+  },
+  "QIUSDT": {
+    "high": 0.02842,
+    "low": 0.00652
+  },
+  "PORTOUSDT": {
+    "high": 3.359,
+    "low": 0.803
+  },
+  "POWRUSDT": {
+    "high": 0.42,
+    "low": 0.1246
+  },
+  "JASMYUSDT": {
+    "high": 0.05913,
+    "low": 0.00822
+  },
+  "AMPUSDT": {
+    "high": 0.0145,
+    "low": 0.002754
+  },
+  "PYRUSDT": {
+    "high": 7.0,
+    "low": 0.874
+  },
+  "ALCXUSDT": {
+    "high": 34.3,
+    "low": 7.01
+  },
+  "SANTOSUSDT": {
+    "high": 8.32,
+    "low": 2.038
+  },
+  "BICOUSDT": {
+    "high": 0.6899,
+    "low": 0.078
+  },
+  "FLUXUSDT": {
+    "high": 1.0841,
+    "low": 0.1783
+  },
+  "FXSUSDT": {
+    "high": 5.232,
+    "low": 0.351
+  },
+  "VOXELUSDT": {
+    "high": 0.3096,
+    "low": 0.0201
+  },
+  "HIGHUSDT": {
+    "high": 9.768,
+    "low": 0.339
+  },
+  "CVXUSDT": {
+    "high": 8.152,
+    "low": 1.42
+  },
+  "PEOPLEUSDT": {
+    "high": 0.144,
+    "low": 0.00973
+  },
+  "SPELLUSDT": {
+    "high": 0.0020884,
+    "low": 0.000379
+  },
+  "JOEUSDT": {
+    "high": 0.6529,
+    "low": 0.1278
+  },
+  "ACHUSDT": {
+    "high": 0.05859,
+    "low": 0.0143
+  },
+  "IMXUSDT": {
+    "high": 2.6127,
+    "low": 0.349
+  },
+  "GLMRUSDT": {
+    "high": 0.4304,
+    "low": 0.0535
+  },
+  "LOKAUSDT": {
+    "high": 0.3457,
+    "low": 0.0516
+  },
+  "SCRTUSDT": {
+    "high": 0.828,
+    "low": 0.1455
+  },
+  "API3USDT": {
+    "high": 3.691,
+    "low": 0.492
+  },
+  "BTTCUSDT": {
+    "high": 1.92e-06,
+    "low": 5.5
+  },
+  "ACAUSDT": {
+    "high": 0.1499,
+    "low": 0.0269
+  },
+  "XNOUSDT": {
+    "high": 2.489,
+    "low": 0.667
+  },
+  "WOOUSDT": {
+    "high": 0.3844,
+    "low": 0.054
+  },
+  "ALPINEUSDT": {
+    "high": 2.08,
+    "low": 0.633
+  },
+  "TUSDT": {
+    "high": 0.04317,
+    "low": 0.01167
+  },
+  "ASTRUSDT": {
+    "high": 0.1033,
+    "low": 0.02086
+  },
+  "GMTUSDT": {
+    "high": 0.2639,
+    "low": 0.0364
+  },
+  "KDAUSDT": {
+    "high": 1.9869,
+    "low": 0.3214
+  },
+  "APEUSDT": {
+    "high": 2.168,
+    "low": 0.3484
+  },
+  "BSWUSDT": {
+    "high": 0.1149,
+    "low": 0.011
+  },
+  "BIFIUSDT": {
+    "high": 441.8,
+    "low": 131.1
+  },
+  "STEEMUSDT": {
+    "high": 0.3818,
+    "low": 0.1007
+  },
+  "NEXOUSDT": {
+    "high": 1.58,
+    "low": 0.808
+  },
+  "REIUSDT": {
+    "high": 0.095,
+    "low": 0.01664
+  },
+  "LDOUSDT": {
+    "high": 2.723,
+    "low": 0.611
+  },
+  "OPUSDT": {
+    "high": 3.028,
+    "low": 0.545
+  },
+  "LEVERUSDT": {
+    "high": 0.004381,
+    "low": 0.000379
+  },
+  "STGUSDT": {
+    "high": 0.8687,
+    "low": 0.0525
+  },
+  "LUNCUSDT": {
+    "high": 0.0001798,
+    "low": 4.665e-05
+  },
+  "GMXUSDT": {
+    "high": 47.0,
+    "low": 9.58
+  },
+  "POLYXUSDT": {
+    "high": 0.532,
+    "low": 0.1055
+  },
+  "APTUSDT": {
+    "high": 15.33,
+    "low": 3.893
+  },
+  "OSMOUSDT": {
+    "high": 1.0527,
+    "low": 0.1963
+  },
+  "HFTUSDT": {
+    "high": 0.3241,
+    "low": 0.0457
+  },
+  "PHBUSDT": {
+    "high": 3.186,
+    "low": 0.326
+  },
+  "HOOKUSDT": {
+    "high": 1.0287,
+    "low": 0.0867
+  },
+  "MAGICUSDT": {
+    "high": 1.0112,
+    "low": 0.0641
+  },
+  "HIFIUSDT": {
+    "high": 0.9149,
+    "low": 0.1123
+  },
+  "RPLUSDT": {
+    "high": 36.0,
+    "low": 3.14
+  },
+  "GNSUSDT": {
+    "high": 4.605,
+    "low": 1.031
+  },
+  "SYNUSDT": {
+    "high": 1.0445,
+    "low": 0.1188
+  },
+  "SSVUSDT": {
+    "high": 51.64,
+    "low": 4.26
+  },
+  "LQTYUSDT": {
+    "high": 2.88,
+    "low": 0.431
+  },
+  "USTCUSDT": {
+    "high": 0.03191,
+    "low": 0.00849
+  },
+  "GASUSDT": {
+    "high": 7.748,
+    "low": 1.752
+  },
+  "GLMUSDT": {
+    "high": 0.6718,
+    "low": 0.2026
+  },
+  "PROMUSDT": {
+    "high": 13.3,
+    "low": 3.285
+  },
+  "QKCUSDT": {
+    "high": 0.017387,
+    "low": 0.005138
+  },
+  "IDUSDT": {
+    "high": 0.816,
+    "low": 0.1489
+  },
+  "ARBUSDT": {
+    "high": 1.2754,
+    "low": 0.242
+  },
+  "RDNTUSDT": {
+    "high": 0.2256,
+    "low": 0.01572
+  },
+  "WBTCUSDT": {
+    "high": 109295.92,
+    "low": 5209.0
+  },
+  "EDUUSDT": {
+    "high": 1.205,
+    "low": 0.0934
+  },
+  "SUIUSDT": {
+    "high": 5.3687,
+    "low": 0.4625
+  },
+  "PEPEUSDT": {
+    "high": 2.836e-05,
+    "low": 5.25e-06
+  },
+  "FLOKIUSDT": {
+    "high": 0.000349,
+    "low": 4.545e-05
+  },
+  "MAVUSDT": {
+    "high": 0.5038,
+    "low": 0.04448
+  },
+  "PENDLEUSDT": {
+    "high": 7.25,
+    "low": 1.813
+  },
+  "ARKMUSDT": {
+    "high": 2.817,
+    "low": 0.391
+  },
+  "WBETHUSDT": {
+    "high": 4340.0,
+    "low": 1470.88
+  },
+  "WLDUSDT": {
+    "high": 5.675,
+    "low": 0.573
+  },
+  "FDUSDUSDT": {
+    "high": 1.2026,
+    "low": 0.8726
+  },
+  "SEIUSDT": {
+    "high": 0.7357,
+    "low": 0.1303
+  },
+  "CYBERUSDT": {
+    "high": 9.79,
+    "low": 0.882
+  },
+  "ARKUSDT": {
+    "high": 0.9214,
+    "low": 0.2
+  },
+  "IQUSDT": {
+    "high": 0.013229,
+    "low": 0.003224
+  },
+  "NTRNUSDT": {
+    "high": 0.844,
+    "low": 0.1004
+  },
+  "TIAUSDT": {
+    "high": 11.96,
+    "low": 2.146
+  },
+  "MEMEUSDT": {
+    "high": 0.0336,
+    "low": 0.001376
+  },
+  "ORDIUSDT": {
+    "high": 65.63,
+    "low": 5.61
+  },
+  "BEAMXUSDT": {
+    "high": 0.04109,
+    "low": 0.00484
+  },
+  "PIVXUSDT": {
+    "high": 0.492,
+    "low": 0.1037
+  },
+  "VICUSDT": {
+    "high": 0.5742,
+    "low": 0.1654
+  },
+  "BLURUSDT": {
+    "high": 0.489,
+    "low": 0.0807
+  },
+  "VANRYUSDT": {
+    "high": 0.248,
+    "low": 0.0201
+  },
+  "AEURUSDT": {
+    "high": 1.1278,
+    "low": 0.756
+  },
+  "JTOUSDT": {
+    "high": 4.943,
+    "low": 1.407
+  },
+  "1000SATSUSDT": {
+    "high": 0.0004278,
+    "low": 3.25e-05
+  },
+  "BONKUSDT": {
+    "high": 6.23e-05,
+    "low": 8.86e-06
+  },
+  "ACEUSDT": {
+    "high": 6.783,
+    "low": 0.425
+  },
+  "NFPUSDT": {
+    "high": 0.6055,
+    "low": 0.0475
+  },
+  "AIUSDT": {
+    "high": 1.284,
+    "low": 0.1044
+  },
+  "XAIUSDT": {
+    "high": 0.9669,
+    "low": 0.0384
+  },
+  "MANTAUSDT": {
+    "high": 1.892,
+    "low": 0.158
+  },
+  "ALTUSDT": {
+    "high": 0.3879,
+    "low": 0.02214
+  },
+  "JUPUSDT": {
+    "high": 1.44,
+    "low": 0.3018
+  },
+  "PYTHUSDT": {
+    "high": 0.5533,
+    "low": 0.1042
+  },
+  "RONINUSDT": {
+    "high": 3.349,
+    "low": 0.461
+  },
+  "DYMUSDT": {
+    "high": 3.453,
+    "low": 0.214
+  },
+  "PIXELUSDT": {
+    "high": 0.5579,
+    "low": 0.01852
+  },
+  "STRKUSDT": {
+    "high": 1.399,
+    "low": 0.1086
+  },
+  "PORTALUSDT": {
+    "high": 1.2624,
+    "low": 0.0556
+  },
+  "AXLUSDT": {
+    "high": 1.14,
+    "low": 0.2702
+  },
+  "WIFUSDT": {
+    "high": 4.8298,
+    "low": 0.304
+  },
+  "METISUSDT": {
+    "high": 84.71,
+    "low": 11.64
+  },
+  "AEVOUSDT": {
+    "high": 1.127,
+    "low": 0.0756
+  },
+  "BOMEUSDT": {
+    "high": 0.015972,
+    "low": 0.00089
+  },
+  "ETHFIUSDT": {
+    "high": 5.4,
+    "low": 0.399
+  },
+  "ENAUSDT": {
+    "high": 1.33,
+    "low": 0.194
+  },
+  "WUSDT": {
+    "high": 0.764,
+    "low": 0.0646
+  },
+  "TNSRUSDT": {
+    "high": 1.496,
+    "low": 0.1079
+  },
+  "SAGAUSDT": {
+    "high": 3.4489,
+    "low": 0.1835
+  },
+  "TAOUSDT": {
+    "high": 748.3,
+    "low": 163.7
+  },
+  "OMNIUSDT": {
+    "high": 22.83,
+    "low": 1.7
+  },
+  "REZUSDT": {
+    "high": 0.1869,
+    "low": 0.01072
+  },
+  "BBUSDT": {
+    "high": 0.8789,
+    "low": 0.0816
+  },
+  "NOTUSDT": {
+    "high": 0.037,
+    "low": 0.000779
+  },
+  "IOUSDT": {
+    "high": 6.5,
+    "low": 0.06
+  },
+  "ZKUSDT": {
+    "high": 0.295,
+    "low": 0.0396
+  },
+  "LISTAUSDT": {
+    "high": 0.8571,
+    "low": 0.02
+  },
+  "ZROUSDT": {
+    "high": 7.567,
+    "low": 1.0
+  },
+  "GUSDT": {
+    "high": 0.08,
+    "low": 0.01153
+  },
+  "BANANAUSDT": {
+    "high": 78.68,
+    "low": 10.2
+  },
+  "RENDERUSDT": {
+    "high": 11.9,
+    "low": 2.504
+  },
+  "TONUSDT": {
+    "high": 7.269,
+    "low": 2.354
+  },
+  "DOGSUSDT": {
+    "high": 0.0018,
+    "low": 0.0001006
+  },
+  "EURIUSDT": {
+    "high": 1.2005,
+    "low": 1.0189
+  },
+  "SLFUSDT": {
+    "high": 0.88,
+    "low": 0.1444
+  },
+  "POLUSDT": {
+    "high": 1.0,
+    "low": 0.1519
+  },
+  "NEIROUSDT": {
+    "high": 0.00311729,
+    "low": 3.118e-05
+  },
+  "TURBOUSDT": {
+    "high": 0.014478,
+    "low": 0.00136
+  },
+  "1MBABYDOGEUSDT": {
+    "high": 0.0067042,
+    "low": 0.0008704
+  },
+  "CATIUSDT": {
+    "high": 1.2,
+    "low": 0.0715
+  },
+  "HMSTRUSDT": {
+    "high": 0.014149,
+    "low": 0.001
+  },
+  "EIGENUSDT": {
+    "high": 5.659,
+    "low": 0.3
+  },
+  "SCRUSDT": {
+    "high": 1.94,
+    "low": 0.207
+  },
+  "BNSOLUSDT": {
+    "high": 302.5,
+    "low": 99.3
+  },
+  "LUMIAUSDT": {
+    "high": 4.06,
+    "low": 0.223
+  },
+  "KAIAUSDT": {
+    "high": 0.425,
+    "low": 0.08
+  },
+  "COWUSDT": {
+    "high": 1.23,
+    "low": 0.1916
+  },
+  "CETUSUSDT": {
+    "high": 0.4972,
+    "low": 0.0763
+  },
+  "PNUTUSDT": {
+    "high": 2.5,
+    "low": 0.1047
+  },
+  "ACTUSDT": {
+    "high": 0.95,
+    "low": 0.0196
+  },
+  "USUALUSDT": {
+    "high": 1.6521,
+    "low": 0.0125
+  },
+  "THEUSDT": {
+    "high": 4.1855,
+    "low": 0.1682
+  },
+  "ACXUSDT": {
+    "high": 1.86,
+    "low": 0.1677
+  },
+  "ORCAUSDT": {
+    "high": 12.8,
+    "low": 1.358
+  },
+  "MOVEUSDT": {
+    "high": 1.41,
+    "low": 0.02
+  },
+  "MEUSDT": {
+    "high": 8.0,
+    "low": 0.3
+  },
+  "VELODROMEUSDT": {
+    "high": 0.388,
+    "low": 0.0356
+  },
+  "VANAUSDT": {
+    "high": 35.8,
+    "low": 1.0
+  },
+  "1000CATUSDT": {
+    "high": 0.07089,
+    "low": 0.00416
+  },
+  "PENGUUSDT": {
+    "high": 0.07,
+    "low": 0.003375
+  },
+  "BIOUSDT": {
+    "high": 1.477,
+    "low": 0.03
+  },
+  "DUSDT": {
+    "high": 0.21707,
+    "low": 0.03525
+  },
+  "AIXBTUSDT": {
+    "high": 0.99,
+    "low": 0.0658
+  },
+  "CGPTUSDT": {
+    "high": 0.473,
+    "low": 0.0541
+  },
+  "COOKIEUSDT": {
+    "high": 0.6999,
+    "low": 0.0703
+  },
+  "SUSDT": {
+    "high": 0.99,
+    "low": 0.3154
+  },
+  "SOLVUSDT": {
+    "high": 0.197,
+    "low": 0.02163
+  },
+  "TRUMPUSDT": {
+    "high": 77.24,
+    "low": 7.14
+  },
+  "ANIMEUSDT": {
+    "high": 0.107,
+    "low": 0.01216
+  },
+  "BERAUSDT": {
+    "high": 15.5,
+    "low": 1.0
+  },
+  "1000CHEEMSUSDT": {
+    "high": 0.002183,
+    "low": 0.000666
+  },
+  "TSTUSDT": {
+    "high": 0.528,
+    "low": 0.05
+  },
+  "LAYERUSDT": {
+    "high": 3.4303,
+    "low": 0.2
+  },
+  "HEIUSDT": {
+    "high": 1.49,
+    "low": 0.2281
+  },
+  "KAITOUSDT": {
+    "high": 2.9274,
+    "low": 0.1
+  },
+  "SHELLUSDT": {
+    "high": 0.7099,
+    "low": 0.1077
+  },
+  "REDUSDT": {
+    "high": 1.4609,
+    "low": 0.2
+  },
+  "GPSUSDT": {
+    "high": 0.151,
+    "low": 0.0151
+  },
+  "EPICUSDT": {
+    "high": 2.26,
+    "low": 1.115
+  },
+  "BMTUSDT": {
+    "high": 0.3298,
+    "low": 0.0721
+  },
+  "FORMUSDT": {
+    "high": 2.9766,
+    "low": 1.27
+  },
+  "XUSDUSDT": {
+    "high": 1.0095,
+    "low": 0.9952
+  },
+  "NILUSDT": {
+    "high": 0.977,
+    "low": 0.325
+  },
+  "PARTIUSDT": {
+    "high": 0.4382,
+    "low": 0.025
+  },
+  "MUBARAKUSDT": {
+    "high": 0.2,
+    "low": 0.0208
+  },
+  "TUTUSDT": {
+    "high": 0.058,
+    "low": 0.01261
+  },
+  "BROCCOLI714USDT": {
+    "high": 0.088,
+    "low": 0.02209
+  },
+  "BANANAS31USDT": {
+    "high": 0.01,
+    "low": 0.00431
+  },
+  "GUNUSDT": {
+    "high": 0.15,
+    "low": 0.03
+  },
+  "BABYUSDT": {
+    "high": 0.18175,
+    "low": 0.03
+  },
+  "ONDOUSDT": {
+    "high": 1.1104,
+    "low": 0.7056
+  },
+  "BIGTIMEUSDT": {
+    "high": 0.0919,
+    "low": 0.05873
+  },
+  "VIRTUALUSDT": {
+    "high": 2.2213,
+    "low": 0.4199
+  },
+  "KERNELUSDT": {
+    "high": 0.899,
+    "low": 0.1
+  },
+  "WCTUSDT": {
+    "high": 0.6537,
+    "low": 0.2
+  },
+  "HYPERUSDT": {
+    "high": 0.3666,
+    "low": 0.09
+  },
+  "INITUSDT": {
+    "high": 1.3796,
+    "low": 0.2
+  },
+  "SIGNUSDT": {
+    "high": 0.1331,
+    "low": 0.03
+  },
+  "STOUSDT": {
+    "high": 0.22,
+    "low": 0.0956
+  },
+  "SYRUPUSDT": {
+    "high": 1.0,
+    "low": 0.1432
+  },
+  "KMNOUSDT": {
+    "high": 0.095,
+    "low": 0.06384
+  },
+  "SXTUSDT": {
+    "high": 0.1988,
+    "low": 0.06
+  }
+}
