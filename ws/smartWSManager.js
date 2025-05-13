@@ -1,10 +1,10 @@
-
 const WebSocket = require('ws');
 const { addCandle, getCandles } = require('./multiCandleCache');
 const { applyStrategies } = require('../strategies/strategyManager');
 const { getTopPairs } = require('../core/volatilitySelector');
 const config = require('../config/config');
 const logger = require('../config/logger');
+const yearHighLow = require('../data/yearHighLow.json');
 
 let activeConnections = new Map();
 
@@ -42,7 +42,10 @@ function subscribeToSymbol(symbol) {
         }
 
         logger.debug(`[STRATEGY] Проверка ${k.s} (интервал: ${k.i})`);
-        const triggers = applyStrategies(k.s);
+
+        const yearly = yearHighLow[k.s] || null;
+        const triggers = applyStrategies(k.s, yearly);
+
         logger.debug(`[TRIGGERS] ${k.s}:`, triggers);
 
         if (triggers.length >= config.SIGNAL_CONFIRMATION_COUNT) {
