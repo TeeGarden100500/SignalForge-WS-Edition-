@@ -112,5 +112,12 @@ setInterval(() => {
   }
   logger.log('');
 }, 5 * 60 * 1000);
+const { checkProximityToExtremes } = require('../core/dailyHighLowScanner');
+
+// Ежедневный запуск отбора монет, близких к HIGH/LOW
+setInterval(() => {
+  logger.log('\n[DAILY CHECK] Проверка пар, близких к максимуму и минимуму...');
+  checkProximityToExtremes();
+}, 24 * 60 * 60 * 1000);
 
 module.exports = { startWSManager };
