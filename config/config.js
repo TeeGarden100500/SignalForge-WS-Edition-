@@ -39,7 +39,7 @@ module.exports = {
   BREAKOUT_MARGIN_PERCENT: 0.05,
 
   // ░░░ Фильтрация сигналов ░░░
-  SIGNAL_CONFIRMATION_COUNT: 2,
+  SIGNAL_CONFIRMATION_COUNT: 3,
   SIGNAL_TIME_WINDOW_UTC: {
     start: '00:00',
     end: '23:59'
@@ -60,7 +60,7 @@ module.exports = {
   EMA_ANGLE_LENGTH: 5,
 
   // ░░░ Волатильность ░░░
-  VOLATILITY_TOP_COUNT: 30,
+  VOLATILITY_TOP_COUNT: 50,
   VOLATILITY_LOOKBACK: 30,
   VOLATILITY_REFRESH_INTERVAL_SEC: 3600,
   
