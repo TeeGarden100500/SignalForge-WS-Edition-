@@ -31,3 +31,13 @@ node -e "require('./ws/multiCandleCache') && console.log(require('./ws/multiCand
 ## 🧪 Пример ручного импорта и вывода стратегии
 # (если потребуется дебаг отдельной пары)
 node -e "require('./strategies/strategyManager').applyStrategies('BTCUSDT', require('./data/yearHighLow.json')['BTCUSDT'])"
+
+📊 Проверка пар, близких к максимуму/минимуму:
+node scripts/testHighLowScan.js
+# Показывает список монет, у которых текущая цена близка к годовому HIGH/LOW
+# Использует настройки из config.js (PERCENT_TO_HIGH и PERCENT_TO_LOW)
+
+
+
+
+
