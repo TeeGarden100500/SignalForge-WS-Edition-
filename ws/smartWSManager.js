@@ -1,3 +1,4 @@
+
 const WebSocket = require('ws');
 const { addCandle, getCandles } = require('./multiCandleCache');
 const { applyStrategies } = require('../strategies/strategyManager');
@@ -45,7 +46,9 @@ function subscribeToSymbol(symbol) {
         logger.debug(`[TRIGGERS] ${k.s}:`, triggers);
 
         if (triggers.length >= config.SIGNAL_CONFIRMATION_COUNT) {
-          console.log(`\n⚡ [SIGNAL] ${k.s} @ ${new Date().toISOString()}\n` + triggers.join('\n') + '\n');
+          const score = triggers.length;
+          const mark = score >= 4 ? '🟢' : score >= 2 ? '🟡' : '🔴';
+          console.log(`\n${mark} [SIGNAL] ${k.s} @ ${new Date().toISOString()} (score: ${score})\n` + triggers.join('\n') + '\n');
         }
       }
     } catch (err) {
