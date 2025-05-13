@@ -65,7 +65,7 @@ module.exports = {
   VOLATILITY_REFRESH_INTERVAL_SEC: 3600,
   
   // 12mth - low/high
-  PERCENT_TO_HIGH: 3,
-  PERCENT_TO_LOW: 3,
+  PERCENT_TO_HIGH: 10,
+  PERCENT_TO_LOW: 10,
 
 };
