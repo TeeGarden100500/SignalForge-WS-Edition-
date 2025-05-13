@@ -20,7 +20,9 @@ function getDistanceToExtremes(symbol) {
     nearHigh,
     nearLow,
     distToHigh: distToHigh.toFixed(2),
-    distToLow: distToLow.toFixed(2)
+    distToLow: distToLow.toFixed(2),
+    high: yearly.high,
+    low: yearly.low
   };
 }
 
