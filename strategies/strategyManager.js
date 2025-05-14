@@ -28,11 +28,11 @@ function applyStrategies(symbol) {
 
   const last5mCloseTime = candles5m.at(-1)?.closeTime;
   const now = Date.now();
-  const intervalMs = 5 * 60 * 1000;
+  const delta = now - last5mCloseTime;
 
-  if (!last5mCloseTime || now % intervalMs > 60 * 1000) {
-    logger.debug(`[SKIP] ${symbol}: вне 5m тайминга`);
-    return triggers;
+  if (delta < 0 || delta > 2 * 60 * 1000) {
+  logger.debug(`[SKIP] ${symbol}: вне 5м тайминга (delta = ${Math.floor(delta / 1000)}s)`);
+  return [];
   }
 
   const closes5m = candles5m.map(c => c.close);
