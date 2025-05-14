@@ -3,7 +3,8 @@ const yearHighLow = require('../data/yearHighLow.json');
 const { getCandles } = require('../ws/multiCandleCache');
 
 const FIBO_LEVELS = [0.236, 0.382, 0.5, 0.618, 0.786];
-const TOLERANCE = 0.015; // 1.5% отклонение допустимо
+const config = require('../config/config');
+const TOLERANCE = config.FIBO_TOLERANCE_PERCENT / 100;
 
 function getFibonacciProximity(symbol) {
   const { high, low } = yearHighLow[symbol] || {};
