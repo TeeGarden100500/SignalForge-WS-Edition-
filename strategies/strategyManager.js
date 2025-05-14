@@ -13,6 +13,7 @@ const {
 } = require('../core/indicators');
 const { getCandles } = require('../ws/multiCandleCache');
 const { getDistanceToExtremes } = require('../core/proximityScanner');
+const { getFibonacciProximity } = require('../core/fibonacciLevels');
 
 function applyStrategies(symbol) {
   const triggers = [];
@@ -25,7 +26,6 @@ function applyStrategies(symbol) {
     return triggers;
   }
 
-  // Проверка: только обрабатывать на закрытии новой 5m свечи
   const last5mCloseTime = candles5m.at(-1)?.closeTime;
   const now = Date.now();
   const intervalMs = 5 * 60 * 1000;
@@ -103,6 +103,11 @@ function applyStrategies(symbol) {
   if (extremes) {
     if (extremes.nearHigh) triggers.push(`⬆️ Near YEAR HIGH ➜ ${extremes.distToHigh}% от ${extremes.high}`);
     if (extremes.nearLow) triggers.push(`⬇️ Near YEAR LOW ➜ ${extremes.distToLow}% от ${extremes.low}`);
+  }
+
+  const fibo = getFibonacciProximity(symbol);
+  if (fibo) {
+    triggers.push(`📐 Near FIBO ${Math.round(fibo.ratio * 100)}% ➜ ${fibo.level} (Δ = ${fibo.diffPercent}%)`);
   }
 
   logger.debug(`[TRIGGERS] ${symbol}: ${triggers.length > 0 ? triggers.join('; ') : 'нет совпадений'}`);
