@@ -65,7 +65,7 @@ module.exports = {
   VOLATILITY_REFRESH_INTERVAL_SEC: 3600,
 
   // отклонение от уровня фибоначи
-  FIBO_TOLERANCE_PERCENT: 1.5, // Допуск в % для попадания в уровень
+  FIBO_TOLERANCE_PERCENT: 2.5, // Допуск в % для попадания в уровень
   
   // 12mth - low/high
   PERCENT_TO_HIGH: 10,
