@@ -39,7 +39,7 @@ module.exports = {
   BREAKOUT_MARGIN_PERCENT: 0.05,
 
   // ░░░ Фильтрация сигналов ░░░
-  SIGNAL_CONFIRMATION_COUNT: 4,
+  SIGNAL_CONFIRMATION_COUNT: 2,
   SIGNAL_TIME_WINDOW_UTC: {
     start: '00:00',
     end: '23:59'
