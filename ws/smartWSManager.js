@@ -91,7 +91,7 @@ function monitorTopPairs() {
     const newList = latest.slice(0, config.VOLATILITY_TOP_COUNT);
     const changed = JSON.stringify(newList) !== JSON.stringify([...activeConnections.keys()]);
     if (changed) updateSubscriptions(newList);
-  }, 60000);
+  }, config.SUBSCRIPTION_REFRESH_INTERVAL_MS);
 }
 
 function startWSManager() {
