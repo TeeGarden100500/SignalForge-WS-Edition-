@@ -72,6 +72,6 @@ module.exports = {
   PERCENT_TO_LOW: 10,
 
     // 🆕 Интервал обновления подписок (мс)
-  SUBSCRIPTION_REFRESH_INTERVAL_MS: 60 * 60 * 1000,
+  SUBSCRIPTION_REFRESH_INTERVAL_MS: 5 * 60 * 1000,
 
 };
