@@ -25,6 +25,16 @@ function applyStrategies(symbol) {
     return triggers;
   }
 
+  // Проверка: только обрабатывать на закрытии новой 5m свечи
+  const last5mCloseTime = candles5m.at(-1)?.closeTime;
+  const now = Date.now();
+  const intervalMs = 5 * 60 * 1000;
+
+  if (!last5mCloseTime || now % intervalMs > 60 * 1000) {
+    logger.debug(`[SKIP] ${symbol}: вне 5m тайминга`);
+    return triggers;
+  }
+
   const closes5m = candles5m.map(c => c.close);
   const highs5m = candles5m.map(c => c.high);
   const lows5m = candles5m.map(c => c.low);
@@ -91,8 +101,8 @@ function applyStrategies(symbol) {
 
   const extremes = getDistanceToExtremes(symbol);
   if (extremes) {
-    if (extremes.nearHigh) triggers.push(`📈⬆️ Near YEAR HIGH ➜ ${extremes.distToHigh}% от ${extremes.high}`);
-    if (extremes.nearLow) triggers.push(`📉⬇️ Near YEAR LOW ➜ ${extremes.distToLow}% от ${extremes.low}`);
+    if (extremes.nearHigh) triggers.push(`⬆️ Near YEAR HIGH ➜ ${extremes.distToHigh}% от ${extremes.high}`);
+    if (extremes.nearLow) triggers.push(`⬇️ Near YEAR LOW ➜ ${extremes.distToLow}% от ${extremes.low}`);
   }
 
   logger.debug(`[TRIGGERS] ${symbol}: ${triggers.length > 0 ? triggers.join('; ') : 'нет совпадений'}`);
