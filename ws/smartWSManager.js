@@ -10,9 +10,9 @@ let activeConnections = new Map();
 
 function subscribeToSymbol(symbol) {
   const streams = [
-    `${symbol.toLowerCase()}@kline_1m`,
     `${symbol.toLowerCase()}@kline_5m`,
-    `${symbol.toLowerCase()}@kline_10m`
+    `${symbol.toLowerCase()}@kline_15m`,
+    `${symbol.toLowerCase()}@kline_1h`
   ];
   const streamUrl = `wss://stream.binance.com:9443/stream?streams=${streams.join('/')}`;
   const ws = new WebSocket(streamUrl);
