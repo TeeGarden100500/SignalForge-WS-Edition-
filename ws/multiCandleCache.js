@@ -7,9 +7,9 @@ const multiCandleCache = {}; // { symbol: { interval: [candles] } }
 function initSymbol(symbol) {
   if (!multiCandleCache[symbol]) {
     multiCandleCache[symbol] = {
-      '1m': [],
       '5m': [],
-      '10m': []
+      '15m': [],
+      '1h': []
     };
   }
 }
@@ -46,9 +46,9 @@ function clearCandles(symbol, interval) {
 
 function clearAll() {
   for (const symbol in multiCandleCache) {
-    multiCandleCache[symbol]['1m'] = [];
     multiCandleCache[symbol]['5m'] = [];
-    multiCandleCache[symbol]['10m'] = [];
+    multiCandleCache[symbol]['15m'] = [];
+    multiCandleCache[symbol]['1h'] = [];
   }
   logger.warn('[CACHE] Полная очистка всех свечей');
 }
