@@ -52,7 +52,7 @@ module.exports = {
   // ░░░ Логика и кэш ░░░
   MAX_CACHE_LENGTH: 500,
   DEBUG_LOGGING: true,
-  DEBUG_LOG_LEVEL: 'verbose', // none | basic | verbose
+  DEBUG_LOG_LEVEL: 'none', // none | basic | verbose
 
   // ░░░ EMA Impulse Angle ░░░
   EMA_ANGLE_PERIOD: 3,
@@ -60,7 +60,7 @@ module.exports = {
   EMA_ANGLE_LENGTH: 5,
 
   // ░░░ Волатильность ░░░
-  VOLATILITY_TOP_COUNT: 5,
+  VOLATILITY_TOP_COUNT: 50,
   VOLATILITY_LOOKBACK: 30,
   VOLATILITY_REFRESH_INTERVAL_SEC: 3600,
 
