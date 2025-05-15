@@ -21,8 +21,8 @@ function applyStrategies(symbol) {
   const candles5m = getCandles(symbol, '5m');
   const candles15m = getCandles(symbol, '15m');
 
-  if (candles15m.length < 5 || candles5m.length < 5) {
-    logger.debug(`[SKIP] ${symbol}: недостаточно свечей для анализа (5m=${candles1m.length}, 15m=${candles5m.length})`);
+  if (candles15m.length < 10 || candles5m.length < 10) {
+    logger.debug(`[SKIP] ${symbol}: недостаточно свечей для анализа (5m=${candles5m.length}, 15m=${candles15m.length})`);
     return triggers;
   }
 
