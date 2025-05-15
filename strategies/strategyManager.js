@@ -89,11 +89,11 @@ function applyStrategies(symbol) {
     triggers.push(`Volume Spike ➜ ${v.recentVolume.toFixed(0)} > Avg=${v.avgVolume.toFixed(0)} ×${(v.spike).toFixed(2)}`);
   }
 
-  const closes1m = candles1m.map(c => c.close);
-  const delta1m = calculateEMAChange(closes5m, config.EMA_ANGLE_LENGTH, config.EMA_ANGLE_PERIOD);
-  const delta5m = calculateEMAChange(closes15m, config.EMA_ANGLE_LENGTH, config.EMA_ANGLE_PERIOD);
+  const closes5m = candles5m.map(c => c.close);
+  const delta5m = calculateEMAChange(closes5m, config.EMA_ANGLE_LENGTH, config.EMA_ANGLE_PERIOD);
+  const delta15m = calculateEMAChange(closes15m, config.EMA_ANGLE_LENGTH, config.EMA_ANGLE_PERIOD);
 
-  logger.debug(`[EMA ANGLE] ${symbol}: delta1m=${delta5m.toFixed(5)} delta15m=${delta5m.toFixed(5)}`);
+  logger.debug(`[EMA ANGLE] ${symbol}: delta5m=${delta5m.toFixed(5)} delta15m=${delta15m.toFixed(5)}`);
 
   if (delta1m > config.EMA_ANGLE_THRESHOLD && delta15m > config.EMA_ANGLE_THRESHOLD) {
     triggers.push(`Impulse Angle ➜ EMA rising on 5m (+${delta1m.toFixed(4)}) & 15m (+${delta5m.toFixed(4)})`);
