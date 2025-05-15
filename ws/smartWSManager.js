@@ -34,8 +34,8 @@ function subscribeToSymbol(symbol) {
 
         addCandle(k.s, k.i, candle);
 
-        const candles5m = getCandles(k.s, '15m');
-        const candles1m = getCandles(k.s, '5m');
+        const candles15m = getCandles(k.s, '15m');
+        const candles5m = getCandles(k.s, '5m');
         if (candles5m.length < 10 || candles1m.length < 10) {
           logger.debug(`[SKIP] ${k.s}: мало свечей (5m=${candles5m.length}, 15m=${candles15m.length})`);
           return;
