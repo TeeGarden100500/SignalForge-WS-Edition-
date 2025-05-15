@@ -90,7 +90,6 @@ function applyStrategies(symbol) {
   }
 
   const closes5m = candles5m.map(c => c.close);
-  const closes15m = candles15m.map(c => c.close);
 
   const delta5m = calculateEMAChange(closes5m, config.EMA_ANGLE_LENGTH, config.EMA_ANGLE_PERIOD);
   const delta15m = calculateEMAChange(closes15m, config.EMA_ANGLE_LENGTH, config.EMA_ANGLE_PERIOD);
