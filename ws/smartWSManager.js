@@ -34,10 +34,10 @@ function subscribeToSymbol(symbol) {
 
         addCandle(k.s, k.i, candle);
 
-        const candles5m = getCandles(k.s, '5m');
-        const candles1m = getCandles(k.s, '1m');
+        const candles5m = getCandles(k.s, '15m');
+        const candles1m = getCandles(k.s, '5m');
         if (candles5m.length < 10 || candles1m.length < 10) {
-          logger.debug(`[SKIP] ${k.s}: мало свечей (1m=${candles1m.length}, 5m=${candles5m.length})`);
+          logger.debug(`[SKIP] ${k.s}: мало свечей (5m=${candles5m.length}, 15m=${candles15m.length})`);
           return;
         }
 
@@ -105,10 +105,10 @@ setInterval(() => {
 
   logger.log('\n[CACHE STATUS] Готовность к сигналам:');
   for (const symbol of allSymbols) {
-    const c1 = getCandles(symbol, '1m').length;
-    const c5 = getCandles(symbol, '5m').length;
-    const c10 = getCandles(symbol, '10m').length;
-    logger.log(`${symbol} — 1m: ${c1}/10, 5m: ${c5}/10, 10m: ${c10}/10`);
+    const c1 = getCandles(symbol, '5m').length;
+    const c5 = getCandles(symbol, '15m').length;
+    const c10 = getCandles(symbol, '1h').length;
+    logger.log(`${symbol} — 5m: ${c5}/10, 15m: ${c15}/10, 1h: ${c60}/10`);
   }
   logger.log('');
 }, 5 * 60 * 1000);
