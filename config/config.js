@@ -1,8 +1,5 @@
 
 module.exports = {
-  
-  // ░░░ Таймфрейм ░░░
-  INTERVAL: '5m',
 
   // ░░░ RSI ░░░
   RSI_PERIOD: 60,
