@@ -1,6 +1,3 @@
-
-module.exports = {
-
 module.exports = {
   DEBUG_LOG_LEVEL: 'basic',
   TIMEFRAMES: {
