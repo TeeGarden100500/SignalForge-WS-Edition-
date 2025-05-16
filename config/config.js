@@ -1,6 +1,19 @@
 
 module.exports = {
 
+module.exports = {
+  DEBUG_LOG_LEVEL: 'basic',
+  TIMEFRAMES: {
+    LEVEL_1: '5m',
+    LEVEL_2: '15m',
+    LEVEL_3: '1h'
+  },
+  VOLATILITY_TOP_N: 20,
+  BINANCE_STREAM_URL: 'wss://stream.binance.com:9443/ws',
+  MANUAL_LEVELS_PATH: './data/manualLevels.json',
+  YEAR_HIGH_LOW_PATH: './data/yearHighLow.json',
+  ENABLE_HISTORY_LOG: true,
+  
   // ░░░ RSI ░░░
   RSI_PERIOD: 60,
   RSI_LOW: 30,
