@@ -67,9 +67,9 @@ module.exports = {
   EMA_ANGLE_LENGTH: 5,
 
   // ░░░ Волатильность ░░░
-  VOLATILITY_TOP_COUNT: 50,
-  VOLATILITY_LOOKBACK: 30,
-  VOLATILITY_REFRESH_INTERVAL_SEC: 3600,
+  VOLATILITY_TOP_COUNT: 5,
+  VOLATILITY_LOOKBACK: 5,
+  VOLATILITY_REFRESH_INTERVAL_SEC: 300,
 
   // отклонение от уровня фибоначи
   FIBO_TOLERANCE_PERCENT: 5.5, // Допуск в % для попадания в уровень
